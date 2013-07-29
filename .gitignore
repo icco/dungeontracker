@@ -12,15 +12,28 @@
 /db/*.sqlite3-journal
 
 # Ignore all logfiles and tempfiles.
-/log/*.log
-/tmp
 !.keep
+**.orig
 *.DS_Store
+*.rbc
+*.sassc
 *.swp
 .env
-bin/stubs
+.rspec
+.sass-cache
+/coverage/
+/log/*
+/log/*.log
+/public/system/*
+/spec/tmp/*
+/tmp
+/tmp/*
+/vendor/bundle
+capybara-*.html
 coverage/*
+pickle-email-*.html
 public/system
+rerun.txt
 rerun.txt
 tags
 vendor/bundler_gems

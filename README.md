@@ -1,5 +1,7 @@
-You look great in Suspenders
-============================
+# Dungeon Tracker
+
+A tool for coordinating D&amp;D campaigns.
+
 
 Use the following guides for getting things done, programming well, and
 programming in style.
