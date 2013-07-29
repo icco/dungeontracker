@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 ruby '1.9.3'
 
-gem 'airbrake'
 gem 'bourbon'
 gem 'delayed_job_active_record', '>= 4.0.0.beta2'
 gem 'email_validator'
@@ -45,6 +44,5 @@ group :test do
 end
 
 group :staging, :production do
-  gem 'newrelic_rpm', '>= 3.5.7'
   gem 'rails_12factor'
 end
