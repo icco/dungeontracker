@@ -15,8 +15,8 @@ gem 'rack-timeout'
 gem 'rails', '>= 4.0.0'
 gem 'recipient_interceptor'
 gem 'simple_form'
+gem 'thin'
 gem 'turbolinks'
-gem 'unicorn'
 
 group :assets do
   gem 'coffee-rails'
