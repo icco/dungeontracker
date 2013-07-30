@@ -5,7 +5,7 @@ class CreateCampaigns < ActiveRecord::Migration
       t.text :description
       t.datetime :begin_date
       t.integer :dm_id
-      t.integer_array :players
+      t.string :players
 
       t.timestamps
     end

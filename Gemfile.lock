@@ -19,8 +19,6 @@ GEM
       activesupport (= 4.0.0)
       arel (~> 4.0.0)
     activerecord-deprecated_finders (1.0.3)
-    activerecord-postgres-array (0.0.9)
-      activerecord
     activesupport (4.0.0)
       i18n (~> 0.6, >= 0.6.4)
       minitest (~> 4.2)
@@ -30,7 +28,7 @@ GEM
     addressable (2.3.5)
     arel (4.0.0)
     atomic (1.1.10)
-    bcrypt-ruby (3.0.1)
+    bcrypt-ruby (3.1.1)
     better_errors (0.9.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -108,7 +106,7 @@ GEM
     omniauth (1.1.4)
       hashie (>= 1.2, < 3)
       rack
-    omniauth-identity (1.1.0)
+    omniauth-identity (1.1.1)
       bcrypt-ruby (~> 3.0)
       omniauth (~> 1.0)
     pg (0.16.0)
@@ -196,7 +194,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activerecord-postgres-array
   better_errors
   binding_of_caller
   bourbon
