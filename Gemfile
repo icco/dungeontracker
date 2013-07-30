@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '1.9.3'
 
-gem 'bcrypt-ruby'
+gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'bourbon'
 gem 'delayed_job_active_record', '>= 4.0.0.beta2'
 gem 'email_validator'
