@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 ruby '1.9.3'
 
+gem 'bcrypt-ruby'
 gem 'bourbon'
 gem 'delayed_job_active_record', '>= 4.0.0.beta2'
 gem 'email_validator'
@@ -14,6 +15,7 @@ gem 'rack-timeout'
 gem 'rails', '>= 4.0.0'
 gem 'recipient_interceptor'
 gem 'simple_form'
+gem 'turbolinks'
 gem 'unicorn'
 
 group :assets do
