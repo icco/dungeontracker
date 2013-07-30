@@ -17,11 +17,13 @@ gem 'recipient_interceptor'
 gem 'simple_form'
 gem 'thin'
 gem 'turbolinks'
+gem 'zurb-foundation', '~> 4.0.0'
 
 group :assets do
   gem 'coffee-rails'
   gem 'sass-rails'
   gem 'uglifier'
+  gem 'compass-rails' # you need this or you get an err
 end
 
 group :development do
