@@ -5,6 +5,7 @@ development: &default
   min_messages: warning
   pool: 5
   timeout: 5000
+  host: localhost
 
 test:
   <<: *default
