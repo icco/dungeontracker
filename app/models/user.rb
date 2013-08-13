@@ -3,10 +3,10 @@ class User < ActiveRecord::Base
   validates :email, :email => true, :allow_nil => true
 
   def User.login email, password
-    identity = Identity.authenticate(email, password)
+    identity = Identity.authenticate({:email => email}, password)
 
     if identity
-      user = User.find_or_create_by_email email
+      user = User.find_by_email email
       p user.errors.messages if !user.valid?
 
       return user
