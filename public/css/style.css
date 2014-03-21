@@ -1,0 +1,23 @@
+html, body { -webkit-font-smoothing: antialiased; }
+
+body { font-family: adelle,Helvetica Neue,Helvetica,Arial,sans-serif; color: #222222; margin: 3rem 0; }
+
+a, a:visited { color: #d87a68; font-weight: 700; text-decoration: none; }
+
+a:hover { text-decoration: underline; }
+
+h1.site-title a, h1.site-title a:hover { color: #222222; text-decoration: none; }
+
+pre { color: #8c7054; font-family: source-code-pro,Consolas,Monaco,'Andale Mono',monospace; font-size: 16px; line-height: 1.25; background-color: #f7f5f2; padding: 15px; padding: .75rem; }
+
+.site-title { margin-bottom: 0; letter-spacing: -.05px; }
+
+.site-title:first-letter { margin-right: -.05em; }
+
+a.signup-button { background-color: #d87a68; color: white; padding: 8px 15px; display: block; }
+
+.submit-button { padding: 8px 55px; }
+
+.pure-button { border-radius: .24rem; font-size: .75rem; line-height: 2; }
+
+.large-input input { margin-bottom: 15px; width: 70%; }

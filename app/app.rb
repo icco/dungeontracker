@@ -30,5 +30,4 @@ module DungeonTracker
       render 'errors/505'
     end
   end
-  end
 end
