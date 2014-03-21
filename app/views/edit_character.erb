@@ -1,9 +1,8 @@
-<!-- Left Side Editing Block -->
 <div class="page_left">
+  <% form_tag url_for(:edit_character, :id => @c.id), :method => 'post', :class => 'pure-form' do %>
 
-  <!-- Form Block -->
-  <div id="form" class="page_form">
-
+    <!-- Form Block -->
+    <div id="form" class="page_form">
 
       <div class="form_section">
         <input type="text" class="form_input_text" name="0_0_0"><div class="form_lable ">Name:</div>
@@ -316,6 +315,9 @@
         <a class="form_add" onclick="addElement(this);" name="24_add">Add Note</a><br>
       </div>
 
-      <div style="height:5px;"></div>
-  </div>
+      <div class="form_section">
+        <%= submit_tag "Save", :class => "pure-button pure-button-primary" %>
+      </div>
+    </div>
+  <% end %>
 </div>

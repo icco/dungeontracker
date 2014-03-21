@@ -25,8 +25,13 @@ DungeonTracker::App.controllers  do
   end
 
   post :edit_character, :map => '/character/:id' do
-    p params
-    render :edit_character
+    @c = Character.where(id: params[:id]).first
+    if @c.nil?
+      404
+    else
+      p params
+      redirect url_for(:edit_character, id: @c.id)
+    end
   end
 
   get :view_character, :map => '/character/:id' do
