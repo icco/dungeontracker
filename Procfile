@@ -1,2 +1,1 @@
-web: bundle exec rails server thin -p $PORT
-worker: bundle exec rake jobs:work
+web: bundle exec thin -p $PORT
