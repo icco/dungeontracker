@@ -2,7 +2,7 @@
 # Database config for relational db.
 init = Time.now
 connections = {
-  :development => "postgres://localhost/dungeontracker",
+  :development => "postgres://#{ENV['USER']}@localhost/dungeontracker",
   :test => "postgres://postgres@localhost/dungeontracker_test",
   :production => ENV['DATABASE_URL']
 }.delete_if {|k, v| v.nil? }
