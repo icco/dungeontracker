@@ -1,70 +1,64 @@
 <!-- Left Side Editing Block -->
 <div class="page_left">
 
-  <!-- Form Tabs -->
-  <span id="tab_1" class="page_tab page_tab_selected" onclick="showTab(1);" style="border-bottom-style: none; background-color: rgb(187, 187, 187); height: 18px;">Column One</span>
-  <span id="tab_2" class="page_tab" onclick="showTab(2);" style="border-bottom-style: solid; background-color: rgb(153, 153, 153); height: 17px;">Column Two</span>
-  <span id="tab_3" class="page_tab" onclick="showTab(3);" style="border-bottom-style: solid; background-color: rgb(153, 153, 153); height: 17px;">Column Three</span>
-
   <!-- Form Block -->
   <div id="form" class="page_form">
 
 
-    <span id="holder_1" style="display: inline;">
       <div class="form_section">
-        <input type="text" class="form_input_text" name="0_0_0" onkeyup="updateField(this);"><div class="form_lable ">Name:</div>
-        <input type="text" class="form_input_text" name="0_0_1" onkeyup="updateField(this);"><div class="form_lable ">Level:</div>
-        <input type="text" class="form_input_text" name="0_0_2" onkeyup="updateField(this);"><div class="form_lable ">Race:</div>
-        <input type="text" class="form_input_text" name="0_0_3" onkeyup="updateField(this);"><div class="form_lable ">Class:</div>
+        <input type="text" class="form_input_text" name="0_0_0"><div class="form_lable ">Name:</div>
+        <input type="text" class="form_input_text" name="0_0_1"><div class="form_lable ">Level:</div>
+        <input type="text" class="form_input_text" name="0_0_2"><div class="form_lable ">Race:</div>
+        <input type="text" class="form_input_text" name="0_0_3"><div class="form_lable ">Class:</div>
       </div>
 
       <div class="form_section">
         <div class="form_section_head">
-          <a class="form_move" name="1_promote" onclick="promoteBlock(this);">&#9650;</a>
-          <a class="form_move" name="1_demote" onclick="demoteBlock(this);">&#9660;</a>
-          <a class="form_move" name="1_vis" onclick="toggleBlockVis(this);">Hide</a>
+          <a class="form_move" name="1_promote">&#9650;</a>
+          <a class="form_move" name="1_demote">&#9660;</a>
+          <a class="form_move" name="1_vis">Hide</a>
           Attributes
         </div>
 
-        <input type="text" class="form_input_text form_input_text_half" name="1_0_1" onkeyup="updateField(this);"><input type="text" class="form_input_text form_input_text_half" name="1_0_0" onkeyup="updateField(this);"><div class="form_lable ">Strength:</div>
+        <input type="text" class="form_input_text form_input_text_half" name="1_0_1"><input type="text" class="form_input_text form_input_text_half" name="1_0_0" ><div class="form_lable ">Strength:</div>
 
-        <input type="text" class="form_input_text form_input_text_half" name="1_1_1" onkeyup="updateField(this);"><input type="text" class="form_input_text form_input_text_half" name="1_1_0" onkeyup="updateField(this);"><div class="form_lable ">Constitution:</div>
+        <input type="text" class="form_input_text form_input_text_half" name="1_1_1"><input type="text" class="form_input_text form_input_text_half" name="1_1_0" ><div class="form_lable ">Constitution:</div>
 
-        <input type="text" class="form_input_text form_input_text_half" name="1_2_1" onkeyup="updateField(this);"><input type="text" class="form_input_text form_input_text_half" name="1_2_0" onkeyup="updateField(this);"><div class="form_lable ">Dexterity:</div>
+        <input type="text" class="form_input_text form_input_text_half" name="1_2_1"><input type="text" class="form_input_text form_input_text_half" name="1_2_0" ><div class="form_lable ">Dexterity:</div>
 
-        <input type="text" class="form_input_text form_input_text_half" name="1_3_1" onkeyup="updateField(this);"><input type="text" class="form_input_text form_input_text_half" name="1_3_0" onkeyup="updateField(this);"><div class="form_lable ">Intelligence:</div>
+        <input type="text" class="form_input_text form_input_text_half" name="1_3_1"><input type="text" class="form_input_text form_input_text_half" name="1_3_0" ><div class="form_lable ">Intelligence:</div>
 
-        <input type="text" class="form_input_text form_input_text_half" name="1_4_1" onkeyup="updateField(this);"><input type="text" class="form_input_text form_input_text_half" name="1_4_0" onkeyup="updateField(this);"><div class="form_lable ">Wisdom:</div>
+        <input type="text" class="form_input_text form_input_text_half" name="1_4_1"><input type="text" class="form_input_text form_input_text_half" name="1_4_0" ><div class="form_lable ">Wisdom:</div>
 
-        <input type="text" class="form_input_text form_input_text_half" name="1_5_1" onkeyup="updateField(this);"><input type="text" class="form_input_text form_input_text_half" name="1_5_0" onkeyup="updateField(this);"><div class="form_lable ">Charisma:</div>
+        <input type="text" class="form_input_text form_input_text_half" name="1_5_1"><input type="text" class="form_input_text form_input_text_half" name="1_5_0" ><div class="form_lable ">Charisma:</div>
 
       </div>
 
       <div class="form_section">
         <div class="form_section_head">
-          <a class="form_move" name="2_promote" onclick="promoteBlock(this);">&#9650;</a>
-          <a class="form_move" name="2_demote" onclick="demoteBlock(this);">&#9660;</a>
-          <a class="form_move" name="2_vis" onclick="toggleBlockVis(this);">Hide</a>
+          <a class="form_move" name="2_promote">&#9650;</a>
+          <a class="form_move" name="2_demote">&#9660;</a>
+          <a class="form_move" name="2_vis">Hide</a>
           Hit Points
         </div>
 
-        <input type="text" class="form_input_text" name="2_0_0" onkeyup="updateField(this);"><div class="form_lable ">Total HP:</div>
-        <input type="text" class="form_input_text" name="2_0_1" onkeyup="updateField(this);"><div class="form_lable ">Bloodied HP:</div>
-        <input type="text" class="form_input_text" name="2_0_2" onkeyup="updateField(this);"><div class="form_lable ">Surges:</div>
-        <input type="text" class="form_input_text" name="2_0_3" onkeyup="updateField(this);"><div class="form_lable ">Surge Value:</div>
+        <input type="text" class="form_input_text" name="2_0_0"><div class="form_lable ">Total HP:</div>
+        <input type="text" class="form_input_text" name="2_0_1"><div class="form_lable ">Bloodied HP:</div>
+        <input type="text" class="form_input_text" name="2_0_2"><div class="form_lable ">Surges:</div>
+        <input type="text" class="form_input_text" name="2_0_3"><div class="form_lable ">Surge Value:</div>
       </div>
 
       <div class="form_section">
         <div class="form_section_head">
-          <a class="form_move" name="3_promote" onclick="promoteBlock(this);">&#9650;</a>
-          <a class="form_move" name="3_demote" onclick="demoteBlock(this);">&#9660;</a>
-          <a class="form_move" name="3_vis" onclick="toggleBlockVis(this);">Hide</a>
+          <a class="form_move" name="3_promote">&#9650;</a>
+          <a class="form_move" name="3_demote">&#9660;</a>
+          <a class="form_move" name="3_vis">Hide</a>
           Save Modifiers
         </div>
 
         <span style="position:relative;">
-          <a name="3_0_delete" class="form_delete" onclick="deleteElement(this);">&#10008;</a>
-          <input type="text" class="form_input_text form_input_text_short" name="3_0_0" onkeyup="updateField(this);">
+          <a name="3_0_delete" class="form_delete">&#10008;</a>
+          <input type="text" class="form_input_text form_input_text_short" name="3_0_0">
           <div class="form_lable ">Save Modifier:</div>
         </span>
 
@@ -122,8 +116,6 @@
       </div>
 
       <div style="height:5px;"></div>
-    </span>
-    <span id="holder_2" style="display: none;">
 
       <div class="form_section">
         <div class="form_section_head">
@@ -246,8 +238,6 @@
       </div><a class="form_add" onclick="addElement(this);" name="15_add">Add Background</a><br>
 
       <div style="height:5px;"></div>
-    </span>
-    <span id="holder_3" style="display: none;">
 
       <div class="form_section">
         <div class="form_section_head">
@@ -393,6 +383,5 @@
       </div><a class="form_add" onclick="addElement(this);" name="24_add">Add Note</a><br>
 
       <div style="height:5px;"></div>
-    </span>
   </div>
 </div>

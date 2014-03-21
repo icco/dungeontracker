@@ -1,0 +1,54 @@
+.page_tab_selected { border-bottom-style: none; background-color: #BBBBBB; height: 18px; }
+
+.page_form { position: relative; width: 350px; min-height: 200px; padding: 1px 5px 5px 5px; background-color: #BBBBBB; border-style: solid; border-width: 1px; border-color: #000000; }
+
+.page_display { min-height: 200px; margin: 22px 0px 0px 0px; text-align: left; }
+
+.page_code { position: absolute; left: 0px; top: 0px; margin: 0px 0px 10px 0px; width: 346px; height: 130px; padding: 0px 0px 0px 0px; white-space: pre; overflow: scroll; font-family: arial; font-size: 8pt; background-repeat: no-repeat; }
+
+.page_code_html { background-image: url("com_html.jpg"); }
+
+.page_code_xml { background-image: url("com_xml.jpg"); }
+
+.page_anchor { margin-left: auto; margin-right: auto; position: relative; left: -10px; }
+
+.page_import { position: absolute; right: 28px; top: 10px; width: 100px; }
+
+/* Form Element Classes					*/
+.form_section { position: relative; width: 344px; margin: 5px 0px 0px 0px; padding: 2px 2px 0px 2px; background-color: #EEEEDD; border-style: solid; border-width: 1px; border-color: #000000; }
+
+.form_section_head { font-size: 8pt; font-weight: bold; padding: 0px 0px 2px 5px; }
+
+.form_lable { width: 117px; height: 18px; padding: 2px 0px 0px 5px; margin: 0px 0px 2px 0px; background-color: #999999; font-size: 8pt; font-weight: bold; }
+
+.form_lable_multiline { height: 34px; }
+
+.form_input_text { height: 16px; width: 213px; padding: 0px 0px 0px 3px; float: right; }
+
+.form_input_text_half { width: 102px; margin-left: 2px; }
+
+.form_input_text_short { position: absolute; left: 124px; top: 0px; width: 189px; margin-right: 1px; }
+
+.form_input_text_narrow { width: 146px; margin-right: 1px; }
+
+.form_input_area { width: 213px; padding: 0px 0px 0px 3px; float: right; height: 32px; margin-top: 0px; }
+
+.form_input_select { float: right; width: 220px; height: 20px; }
+
+.form_input_select_half { width: 109px; margin-left: 2px; }
+
+.form_input_select_short { width: 196px; position: absolute; left: 124px; top: 0px; }
+
+.form_delete { position: absolute; left: 326px; top: -3px; width: 22px; color: #DD2222; font-size: 14pt; cursor: pointer; }
+
+.form_add { position: relative; float: right; color: #0000FF; right: 2px; cursor: pointer; }
+
+.form_add:hover { text-decoration: underline; }
+
+.form_move { cursor: pointer; float: right; margin: 0px 5px 0px 0px; }
+
+.form_move:hover { color: #888888; }
+
+.form_button { float: right; margin: -1px 0px 0px 0px; padding: 0px 0px 0px 0px; display: inline; height: 22px; width: 22px; }
+
+.form_button_delete { color: #DD2222; }
