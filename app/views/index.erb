@@ -1,1 +1,8 @@
-...
+<div class="unit one-of-three">
+  <% form_tag url_for(:login), :method => 'post', :class => 'pure-form' do %>
+    <fieldset>
+      <%= text_field_tag :email, :placeholder => 'email' %>
+      <%= submit_tag "Login!", :class => "pure-button pure-button-primary" %>
+    </fieldset>
+  <% end %>
+</div>
