@@ -1,0 +1,9 @@
+---
+:orm: activerecord
+:test: minitest
+:mock: none
+:script: none
+:renderer: erb
+:stylesheet: sass
+:namespace: DungeonTracker
+:migration_format: number

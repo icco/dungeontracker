@@ -1,51 +1,35 @@
 source 'https://rubygems.org'
 
-gem 'bcrypt'
-gem 'bourbon'
-gem 'delayed_job_active_record', '>= 4.0.0.beta2'
-gem 'email_validator'
-gem 'flutie'
-gem 'high_voltage'
-gem 'jquery-rails'
-gem 'omniauth-identity'
-gem 'pg'
-gem 'rack-timeout'
-gem 'rails', '>= 4.0.0'
-gem 'recipient_interceptor'
-gem 'simple_form'
-gem 'thin'
-gem 'turbolinks'
-gem 'zurb-foundation', '~> 4.0.0'
+# Distribute your app as a gem
+# gemspec
 
-group :assets do
-  gem 'coffee-rails'
-  gem 'sass-rails'
-  gem 'uglifier'
-  gem 'compass-rails' # you need this or you get an err
-end
+# Server requirements
+# gem 'thin' # or mongrel
+# gem 'trinidad', :platform => 'jruby'
 
-group :development do
-  gem 'foreman'
-  gem 'better_errors'
-  gem 'binding_of_caller'
-end
+# Optional JSON codec (faster performance)
+# gem 'oj'
 
-group :development, :test do
-  gem 'factory_girl_rails'
-  gem 'rspec-rails'
-  gem 'sham_rack'
-end
+# Project requirements
+gem 'rake'
 
-group :test do
-  gem 'bourne', require: false
-  gem 'capybara-webkit', '>= 0.14.1'
-  gem 'database_cleaner'
-  gem 'launchy'
-  gem 'shoulda-matchers'
-  gem 'simplecov', require: false
-  gem 'timecop'
-end
+# Component requirements
+gem 'sass'
+gem 'erubis', '~> 2.7.0'
+gem 'activerecord', '>= 3.1', :require => 'active_record'
+gem 'sqlite3'
 
-group :staging, :production do
-  gem 'rails_12factor'
-end
+# Test requirements
+gem 'minitest', '~>2.6.0', :require => 'minitest/autorun', :group => 'test'
+gem 'rack-test', :require => 'rack/test', :group => 'test'
+
+# Padrino Stable Gem
+gem 'padrino', '0.12.0'
+
+# Or Padrino Edge
+# gem 'padrino', :github => 'padrino/padrino-framework'
+
+# Or Individual Gems
+# %w(core gen helpers cache mailer admin).each do |g|
+#   gem 'padrino-' + g, '0.12.0'
+# end

@@ -1,17 +1,6 @@
-# Add your own tasks in files placed in lib/tasks ending in .rake,
-# for example lib/tasks/capistrano.rake, and they will automatically be available to Rake.
+require 'bundler/setup'
+require 'padrino-core/cli/rake'
 
-require File.expand_path('../config/application', __FILE__)
-
-DungeonTracker::Application.load_tasks
-if defined?(RSpec)
-  desc 'Run factory specs.'
-
-  RSpec::Core::RakeTask.new(:factory_specs) do |t|
-    t.pattern = './spec/models/factories_spec.rb'
-  end
-
-  task spec: :factory_specs
-end
-task(:default).clear
-task :default => [:spec]
+PadrinoTasks.use(:database)
+PadrinoTasks.use(:activerecord)
+PadrinoTasks.init
