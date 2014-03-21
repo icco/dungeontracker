@@ -25,9 +25,5 @@ module DungeonTracker
     error 404 do
       render 'errors/404'
     end
-
-    error 505 do
-      render 'errors/505'
-    end
   end
 end
