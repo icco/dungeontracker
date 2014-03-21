@@ -10,6 +10,16 @@ DungeonTracker::App.controllers  do
   end
 
   get :new_character do
-    render :new_character
+    c = Character.new
+    c.save
+    redirect url_for(:edit_character, :id => c.id)
+  end
+
+  get :edit_character, :map => '/character/:id' do
+    render :edit_character
+  end
+
+  get :view_character, :map => '/character/:id' do
+    render :view_character
   end
 end
