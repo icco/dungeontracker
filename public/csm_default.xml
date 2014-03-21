@@ -1,0 +1,343 @@
+<data>
+	<block name="head">
+		<type>head</type>
+		<count>1</count>
+		<hidden>0</hidden>
+		<elements>
+			<element>
+				<value>Default Name</value>
+				<value>1</value>
+				<value>Human</value>
+				<value>Fighter</value>
+			</element>
+		</elements>
+	</block>
+	<block name="stats">
+		<type>stats</type>
+		<count>6</count>
+		<hidden>0</hidden>
+		<elements>
+			<element>
+				<value>8</value>
+				<value>-1</value>
+				<value>Strength</value>
+			</element>
+			<element>
+				<value>10</value>
+				<value>+0</value>
+				<value>Constitution</value>
+			</element>
+			<element>
+				<value>10</value>
+				<value>+0</value>
+				<value>Dexterity</value>
+			</element>
+			<element>
+				<value>10</value>
+				<value>+0</value>
+				<value>Intelligence</value>
+			</element>
+			<element>
+				<value>10</value>
+				<value>+0</value>
+				<value>Wisdom</value>
+			</element>
+			<element>
+				<value>10</value>
+				<value>+0</value>
+				<value>Charisma</value>
+			</element>
+		</elements>
+	</block>
+	<block name="hp">
+		<type>hp</type>
+		<count>1</count>
+		<hidden>0</hidden>
+		<elements>
+			<element>
+				<value>1</value>
+				<value>0</value>
+				<value>0</value>
+				<value>0</value>
+			</element>
+		</elements>
+	</block>
+	<block name="saves">
+		<type>saves</type>
+		<count>1</count>
+		<hidden>0</hidden>
+		<elements>
+			<element>
+				<value>Description.</value>
+				<value>Save Modifier</value>
+			</element>
+		</elements>
+	</block>
+	<block name="init">
+		<type>init</type>
+		<count>1</count>
+		<hidden>0</hidden>
+		<elements>
+			<element>
+				<value>+0</value>
+				<value></value>
+				<value>Initiative</value>
+			</element>
+		</elements>
+	</block>
+	<block name="move">
+		<type>move</type>
+		<count>1</count>
+		<hidden>0</hidden>
+		<elements>
+			<element>
+				<value>6</value>
+				<value></value>
+				<value>Speed</value>
+			</element>
+		</elements>
+	</block>
+	<block name="skills">
+		<type>skills</type>
+		<count>1</count>
+		<hidden>0</hidden>
+		<elements>
+			<element>
+				<value>+0</value>
+				<value>+0</value>
+				<value>+0</value>
+				<value>+0</value>
+				<value>+0</value>
+				<value>+0</value>
+				<value>+0</value>
+				<value>+0</value>
+				<value>+0</value>
+				<value>+0</value>
+				<value>+0</value>
+				<value>+0</value>
+				<value>+0</value>
+				<value>+0</value>
+				<value>+0</value>
+				<value>+0</value>
+				<value>+0</value>
+			</element>
+		</elements>
+	</block>
+	<block name="colbreak1">
+		<type>colbreak1</type>
+		<count>1</count>
+		<hidden>0</hidden>
+		<elements>
+			<element>
+				<value>0</value>
+			</element>
+		</elements>
+	</block>
+	<block name="ac">
+		<type>ac</type>
+		<count>1</count>
+		<hidden>0</hidden>
+		<elements>
+			<element>
+				<value>10</value>
+				<value></value>
+				<value>Armor Class</value>
+			</element>
+		</elements>
+	</block>
+	<block name="fort">
+		<type>fort</type>
+		<count>1</count>
+		<hidden>0</hidden>
+		<elements>
+			<element>
+				<value>10</value>
+				<value></value>
+				<value>Fortitude</value>
+			</element>
+		</elements>
+	</block>		
+	<block name="ref">
+		<type>ref</type>
+		<count>1</count>
+		<hidden>0</hidden>
+		<elements>
+			<element>
+				<value>10</value>
+				<value></value>
+				<value>Reflex</value>
+			</element>
+		</elements>
+	</block>		
+	<block name="will">
+		<type>will</type>
+		<count>1</count>
+		<hidden>0</hidden>
+		<elements>
+			<element>
+				<value>10</value>
+				<value></value>
+				<value>Will</value>
+			</element>
+		</elements>
+	</block>		
+	<block name="race">
+		<type>race</type>
+		<count>1</count>
+		<hidden>0</hidden>
+		<elements>
+			<element>
+				<value>Feature Name</value>
+				<value>Description</value>
+				<value>Race Feature Name</value>
+			</element>
+		</elements>
+	</block>
+	<block name="class">
+		<type>class</type>
+		<count>1</count>
+		<hidden>0</hidden>
+		<elements>
+			<element>
+				<value>Feature Name</value>
+				<value>Description</value>
+				<value>Class Feature Name</value>
+			</element>
+		</elements>
+	</block>
+	<block name="feats">
+		<type>feats</type>
+		<count>1</count>
+		<hidden>0</hidden>
+		<elements>
+			<element>
+				<value>Feature Name</value>
+				<value>Description</value>
+				<value>Feat Name</value>
+			</element>
+		</elements>
+	</block>
+	<block name="bg">
+		<type>bg</type>
+		<count>1</count>
+		<hidden>0</hidden>
+		<elements>
+			<element>
+				<value>Background Name</value>
+				<value>Description</value>
+				<value>Background Name</value>
+			</element>
+		</elements>
+	</block>
+	<block name="colbreak2">
+		<type>colbreak2</type>
+		<count>1</count>
+		<hidden>0</hidden>
+		<elements>
+			<element>
+				<value>0</value>
+			</element>
+		</elements>
+	</block>
+	<block name="atwill">
+		<type>atwill</type>
+		<count>1</count>
+		<hidden>0</hidden>
+		<elements>
+			<element>
+				<value>Power Name</value>
+				<value>Description</value>
+				<value>Power Name</value>
+			</element>
+		</elements>
+	</block>
+	<block name="encounter">
+		<type>encounter</type>
+		<count>1</count>
+		<hidden>0</hidden>
+		<elements>
+			<element>
+				<value>Power Name</value>
+				<value>Description</value>
+				<value>Power Name</value>
+			</element>
+		</elements>
+	</block>
+	<block name="daily">
+		<type>daily</type>
+		<count>1</count>
+		<hidden>0</hidden>
+		<elements>
+			<element>
+				<value>Power Name</value>
+				<value>Description</value>
+				<value>Power Name</value>
+			</element>
+		</elements>
+	</block>
+	<block name="attacks">
+		<type>attacks</type>
+		<count>1</count>
+		<hidden>0</hidden>
+		<elements>
+			<element>
+				<value>Melee Basic</value>
+				<value>+0</value>
+				<value>AC</value>
+				<value>1d4 + 0</value>
+			</element>
+		</elements>
+	</block>
+	<block name="items">
+		<type>items</type>
+		<count>1</count>
+		<hidden>0</hidden>
+		<elements>
+			<element>
+				<value>Item Name</value>
+				<value>Description</value>
+				<value>Item Name</value>
+			</element>
+		</elements>
+	</block>
+	<block name="money">
+		<type>money</type>
+		<count>1</count>
+		<hidden>0</hidden>
+		<elements>
+			<element>
+				<value>0</value>
+				<value>100</value>
+				<value>0</value>
+				<value>0</value>
+			</element>
+		</elements>
+	</block>
+	<block name="familiar">
+		<type>familiar</type>
+		<count>1</count>
+		<hidden>1</hidden>
+		<elements>
+			<element>
+				<value>Boo</value>
+				<value>Miniature Giant Space Hamster</value>
+				<value>When the going gets tough... somebody hold my rodent!</value>
+				<value>Low-Light Vision</value>
+				<value>3</value>
+				<value>You let your familiar do the thinking, and gain +2 on Diplomacy checks.</value>
+				<value>&lt;b>Go For The Eyes:&lt;/b> When you score a critical hit, your target is blinded (save ends).</value>
+			</element>
+		</elements>
+	</block>
+	<block name="notes">
+		<type>notes</type>
+		<count>1</count>
+		<hidden>1</hidden>
+		<elements>
+			<element>
+				<value>Note</value>
+				<value>Note Text</value>
+			</element>
+		</elements>
+	</block>
+</data>

@@ -1,0 +1,28 @@
+
+/* Monster Card Maker - Style Overrides 		*/
+/* Updated: 06-08-09					*/
+
+.page_main,.page_anchor{
+	width:1104px;
+}
+
+.page_right{
+	width:732px;
+}
+
+.page_display{
+	width:732px;
+}
+
+.page_code{
+	width:545px;
+}
+
+.page_code_xml{
+	left: 555px;
+}
+
+.page_form{
+	padding:1px 5px 0px 5px;
+}
+

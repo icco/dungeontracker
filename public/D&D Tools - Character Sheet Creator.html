@@ -1,0 +1,675 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0047)http://omnichron.net/external/op/tools/csm.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+		<title>D&amp;D Tools - Character Sheet Creator</title>
+		<script type="text/javascript" src="./D&D Tools - Character Sheet Creator_files/com_scripts.js"></script><style type="text/css"></style>
+		<script type="text/javascript" src="./D&D Tools - Character Sheet Creator_files/csm_scripts.js"></script>
+		<link rel="stylesheet" type="text/css" href="./D&D Tools - Character Sheet Creator_files/com_styles.css">
+		<link rel="stylesheet" type="text/css" href="./D&D Tools - Character Sheet Creator_files/csm_styles.css">
+
+	<style>img.chromoji { width:1em !important; height:1em !important; }.chromoji-font, #chromoji-font { font-size:1em !important; }</style><link type="text/css" rel="stylesheet" href="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/style.css"><script type="text/javascript" charset="utf-8" src="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/js/page_context.js"></script></head>
+
+	<body onload="startUp();" screen_capture_injected="true">
+	
+		<!-- Page Header / Nav Bar -->
+		<div class="page_head">
+			<span class="page_head_right">
+				<a href="http://omnichron.net/external/op/tools/mon.html" class="page_head_link">MONSTERS</a>•
+				<a href="./D&D Tools - Character Sheet Creator_files/D&D Tools - Character Sheet Creator.html" class="page_head_link">CHARACTERS</a>•
+				<a href="http://omnichron.net/external/op/tools/pow.html" class="page_head_link">POWERS</a>
+			</span>
+			<span class="page_head_text">D&amp;D TOOLS</span>
+		</div>
+		<div class="page_head page_head_code" id="code_row" style="height: 0px;">
+			
+			<!-- Code Display -->
+			<div class="page_anchor" id="anchor" style="display: none;">
+				<textarea id="code" class="page_code page_code_html" cols="40" rows="5" wrap="off"></textarea><br>
+				<textarea id="data" class="page_code page_code_xml" cols="40" rows="5" wrap="off"></textarea>
+				<button class="page_import" onclick="startUp(true);">Import Data</button>
+			</div>
+			
+		</div>
+	
+		<!-- Main Centering Div -->
+		<div id="main" class="page_main">
+
+			<a onclick="toggleCodeRow(this);" class="page_head_tab">SHOW CODE</a>
+
+			<!-- Left Side Editing Block -->
+			<div class="page_left">
+			
+				<!-- Form Tabs -->
+				<span id="tab_1" class="page_tab page_tab_selected" onclick="showTab(1);" style="border-bottom-style: none; background-color: rgb(187, 187, 187); height: 18px;">Column One</span>
+				<span id="tab_2" class="page_tab" onclick="showTab(2);" style="border-bottom-style: solid; background-color: rgb(153, 153, 153); height: 17px;">Column Two</span>
+				<span id="tab_3" class="page_tab" onclick="showTab(3);" style="border-bottom-style: solid; background-color: rgb(153, 153, 153); height: 17px;">Column Three</span>
+
+				<!-- Form Block -->
+				<div id="form" class="page_form">
+		
+	
+		<span id="holder_1" style="display: inline;">
+		<div class="form_section">
+			<input type="text" class="form_input_text" name="0_0_0" onkeyup="updateField(this);"><div class="form_lable ">Name:</div>
+			<input type="text" class="form_input_text" name="0_0_1" onkeyup="updateField(this);"><div class="form_lable ">Level:</div>
+			<input type="text" class="form_input_text" name="0_0_2" onkeyup="updateField(this);"><div class="form_lable ">Race:</div>
+			<input type="text" class="form_input_text" name="0_0_3" onkeyup="updateField(this);"><div class="form_lable ">Class:</div>
+		</div>
+			
+				<div class="form_section">
+					<div class="form_section_head">
+						<a class="form_move" name="1_promote" onclick="promoteBlock(this);">&#9650;</a> 
+						<a class="form_move" name="1_demote" onclick="demoteBlock(this);">&#9660;</a>
+						<a class="form_move" name="1_vis" onclick="toggleBlockVis(this);">Hide</a>
+						Attributes
+					</div>
+			
+					<input type="text" class="form_input_text form_input_text_half" name="1_0_1" onkeyup="updateField(this);"><input type="text" class="form_input_text form_input_text_half" name="1_0_0" onkeyup="updateField(this);"><div class="form_lable ">Strength:</div>
+			
+					<input type="text" class="form_input_text form_input_text_half" name="1_1_1" onkeyup="updateField(this);"><input type="text" class="form_input_text form_input_text_half" name="1_1_0" onkeyup="updateField(this);"><div class="form_lable ">Constitution:</div>
+			
+					<input type="text" class="form_input_text form_input_text_half" name="1_2_1" onkeyup="updateField(this);"><input type="text" class="form_input_text form_input_text_half" name="1_2_0" onkeyup="updateField(this);"><div class="form_lable ">Dexterity:</div>
+			
+					<input type="text" class="form_input_text form_input_text_half" name="1_3_1" onkeyup="updateField(this);"><input type="text" class="form_input_text form_input_text_half" name="1_3_0" onkeyup="updateField(this);"><div class="form_lable ">Intelligence:</div>
+			
+					<input type="text" class="form_input_text form_input_text_half" name="1_4_1" onkeyup="updateField(this);"><input type="text" class="form_input_text form_input_text_half" name="1_4_0" onkeyup="updateField(this);"><div class="form_lable ">Wisdom:</div>
+			
+					<input type="text" class="form_input_text form_input_text_half" name="1_5_1" onkeyup="updateField(this);"><input type="text" class="form_input_text form_input_text_half" name="1_5_0" onkeyup="updateField(this);"><div class="form_lable ">Charisma:</div>
+			
+				</div> 
+			
+				<div class="form_section">
+					<div class="form_section_head">
+						<a class="form_move" name="2_promote" onclick="promoteBlock(this);">&#9650;</a> 
+						<a class="form_move" name="2_demote" onclick="demoteBlock(this);">&#9660;</a>
+						<a class="form_move" name="2_vis" onclick="toggleBlockVis(this);">Hide</a>
+						Hit Points
+					</div>
+			
+					<input type="text" class="form_input_text" name="2_0_0" onkeyup="updateField(this);"><div class="form_lable ">Total HP:</div>
+					<input type="text" class="form_input_text" name="2_0_1" onkeyup="updateField(this);"><div class="form_lable ">Bloodied HP:</div>
+					<input type="text" class="form_input_text" name="2_0_2" onkeyup="updateField(this);"><div class="form_lable ">Surges:</div>
+					<input type="text" class="form_input_text" name="2_0_3" onkeyup="updateField(this);"><div class="form_lable ">Surge Value:</div>
+				</div>
+			
+				<div class="form_section">
+					<div class="form_section_head">
+						<a class="form_move" name="3_promote" onclick="promoteBlock(this);">&#9650;</a> 
+						<a class="form_move" name="3_demote" onclick="demoteBlock(this);">&#9660;</a>
+						<a class="form_move" name="3_vis" onclick="toggleBlockVis(this);">Hide</a>
+						Save Modifiers
+					</div>
+			
+				<span style="position:relative;">
+					<a name="3_0_delete" class="form_delete" onclick="deleteElement(this);">&#10008;</a>
+					<input type="text" class="form_input_text form_input_text_short" name="3_0_0" onkeyup="updateField(this);">
+					<div class="form_lable ">Save Modifier:</div>
+				</span>
+			
+				</div><a class="form_add" onclick="addElement(this);" name="3_add">Add Save Modifier</a><br>
+			
+				<div class="form_section">
+					<div class="form_section_head">
+						<a class="form_move" name="4_promote" onclick="promoteBlock(this);">&#9650;</a> 
+						<a class="form_move" name="4_demote" onclick="demoteBlock(this);">&#9660;</a>
+						<a class="form_move" name="4_vis" onclick="toggleBlockVis(this);">Hide</a>
+						Initiative
+					</div>
+			
+					<input type="text" class="form_input_text" name="4_0_0" onkeyup="updateField(this);"><div class="form_lable ">Initiative:</div>
+					<textarea type="text" class="form_input_area" name="4_0_1" onkeyup="updateField(lineBreaker(this));"></textarea><div class="form_lable  form_lable_multiline">Modifiers:</div>
+				</div>
+			
+				<div class="form_section">
+					<div class="form_section_head">
+						<a class="form_move" name="5_promote" onclick="promoteBlock(this);">&#9650;</a> 
+						<a class="form_move" name="5_demote" onclick="demoteBlock(this);">&#9660;</a>
+						<a class="form_move" name="5_vis" onclick="toggleBlockVis(this);">Hide</a>
+						Movement
+					</div>
+			
+					<input type="text" class="form_input_text" name="5_0_0" onkeyup="updateField(this);"><div class="form_lable ">Speed:</div>
+					<textarea type="text" class="form_input_area" name="5_0_1" onkeyup="updateField(lineBreaker(this));"></textarea><div class="form_lable  form_lable_multiline">Modifiers:</div>
+				</div>
+			
+				<div class="form_section">
+					<div class="form_section_head">
+						<a class="form_move" name="6_promote" onclick="promoteBlock(this);">&#9650;</a> 
+						<a class="form_move" name="6_demote" onclick="demoteBlock(this);">&#9660;</a>
+						<a class="form_move" name="6_vis" onclick="toggleBlockVis(this);">Hide</a>
+						Skills
+					</div>
+			
+					<input type="text" class="form_input_text" name="6_0_0" onkeyup="updateField(this);"><div class="form_lable ">Acrobatics:</div>
+					<input type="text" class="form_input_text" name="6_0_1" onkeyup="updateField(this);"><div class="form_lable ">Arcana:</div>
+					<input type="text" class="form_input_text" name="6_0_2" onkeyup="updateField(this);"><div class="form_lable ">Athletics:</div>
+					<input type="text" class="form_input_text" name="6_0_3" onkeyup="updateField(this);"><div class="form_lable ">Bluff:</div>
+					<input type="text" class="form_input_text" name="6_0_4" onkeyup="updateField(this);"><div class="form_lable ">Diplomacy:</div>
+					<input type="text" class="form_input_text" name="6_0_5" onkeyup="updateField(this);"><div class="form_lable ">Dungeoneering:</div>
+					<input type="text" class="form_input_text" name="6_0_6" onkeyup="updateField(this);"><div class="form_lable ">Endurance:</div>
+					<input type="text" class="form_input_text" name="6_0_7" onkeyup="updateField(this);"><div class="form_lable ">Heal:</div>
+					<input type="text" class="form_input_text" name="6_0_8" onkeyup="updateField(this);"><div class="form_lable ">History:</div>
+					<input type="text" class="form_input_text" name="6_0_9" onkeyup="updateField(this);"><div class="form_lable ">Insight:</div>
+					<input type="text" class="form_input_text" name="6_0_10" onkeyup="updateField(this);"><div class="form_lable ">Intimidate:</div>
+					<input type="text" class="form_input_text" name="6_0_11" onkeyup="updateField(this);"><div class="form_lable ">Nature:</div>
+					<input type="text" class="form_input_text" name="6_0_12" onkeyup="updateField(this);"><div class="form_lable ">Perception:</div>
+					<input type="text" class="form_input_text" name="6_0_13" onkeyup="updateField(this);"><div class="form_lable ">Religion:</div>
+					<input type="text" class="form_input_text" name="6_0_14" onkeyup="updateField(this);"><div class="form_lable ">Stealth:</div>
+					<input type="text" class="form_input_text" name="6_0_15" onkeyup="updateField(this);"><div class="form_lable ">Streetwise:</div>
+					<input type="text" class="form_input_text" name="6_0_16" onkeyup="updateField(this);"><div class="form_lable ">Thievery:</div>
+				</div>
+			
+				<div style="height:5px;"></div>
+				</span>
+				<span id="holder_2" style="display: none;">
+			
+				<div class="form_section">
+					<div class="form_section_head">
+						<a class="form_move" name="8_promote" onclick="promoteBlock(this);">&#9650;</a> 
+						<a class="form_move" name="8_demote" onclick="demoteBlock(this);">&#9660;</a>
+						<a class="form_move" name="8_vis" onclick="toggleBlockVis(this);">Hide</a>
+						Armor Class
+					</div>
+			
+					<input type="text" class="form_input_text" name="8_0_0" onkeyup="updateField(this);"><div class="form_lable ">Armor Class:</div>
+					<textarea type="text" class="form_input_area" name="8_0_1" onkeyup="updateField(lineBreaker(this));"></textarea><div class="form_lable  form_lable_multiline">Modifiers:</div>
+				</div>
+			
+				<div class="form_section">
+					<div class="form_section_head">
+						<a class="form_move" name="9_promote" onclick="promoteBlock(this);">&#9650;</a> 
+						<a class="form_move" name="9_demote" onclick="demoteBlock(this);">&#9660;</a>
+						<a class="form_move" name="9_vis" onclick="toggleBlockVis(this);">Hide</a>
+						Fortitude
+					</div>
+			
+					<input type="text" class="form_input_text" name="9_0_0" onkeyup="updateField(this);"><div class="form_lable ">Fortitude:</div>
+					<textarea type="text" class="form_input_area" name="9_0_1" onkeyup="updateField(lineBreaker(this));"></textarea><div class="form_lable  form_lable_multiline">Modifiers:</div>
+				</div>
+			
+				<div class="form_section">
+					<div class="form_section_head">
+						<a class="form_move" name="10_promote" onclick="promoteBlock(this);">&#9650;</a> 
+						<a class="form_move" name="10_demote" onclick="demoteBlock(this);">&#9660;</a>
+						<a class="form_move" name="10_vis" onclick="toggleBlockVis(this);">Hide</a>
+						Reflex
+					</div>
+			
+					<input type="text" class="form_input_text" name="10_0_0" onkeyup="updateField(this);"><div class="form_lable ">Reflex:</div>
+					<textarea type="text" class="form_input_area" name="10_0_1" onkeyup="updateField(lineBreaker(this));"></textarea><div class="form_lable  form_lable_multiline">Modifiers:</div>
+				</div>
+			
+				<div class="form_section">
+					<div class="form_section_head">
+						<a class="form_move" name="11_promote" onclick="promoteBlock(this);">&#9650;</a> 
+						<a class="form_move" name="11_demote" onclick="demoteBlock(this);">&#9660;</a>
+						<a class="form_move" name="11_vis" onclick="toggleBlockVis(this);">Hide</a>
+						Will
+					</div>
+			
+					<input type="text" class="form_input_text" name="11_0_0" onkeyup="updateField(this);"><div class="form_lable ">Will:</div>
+					<textarea type="text" class="form_input_area" name="11_0_1" onkeyup="updateField(lineBreaker(this));"></textarea><div class="form_lable  form_lable_multiline">Modifiers:</div>
+				</div>
+			
+				<div class="form_section">
+					<div class="form_section_head">
+						<a class="form_move" name="12_promote" onclick="promoteBlock(this);">&#9650;</a> 
+						<a class="form_move" name="12_demote" onclick="demoteBlock(this);">&#9660;</a>
+						<a class="form_move" name="12_vis" onclick="toggleBlockVis(this);">Hide</a>
+						Race Features
+					</div>
+			
+				<span style="position:relative;">
+					<a name="12_0_delete" class="form_delete" onclick="deleteElement(this);">&#10008;</a>
+					<input type="text" class="form_input_text form_input_text_short" name="12_0_0" onkeyup="updateField(this);">
+					<div class="form_lable ">Race Feature Name:</div>
+					<textarea type="text" class="form_input_area" name="12_0_1" onkeyup="updateField(lineBreaker(this));"></textarea>
+					<div class="form_lable form_lable_multiline">Description:</div>
+				</span>
+			
+				</div><a class="form_add" onclick="addElement(this);" name="12_add">Add Racial Feature</a><br>
+			
+				<div class="form_section">
+					<div class="form_section_head">
+						<a class="form_move" name="13_promote" onclick="promoteBlock(this);">&#9650;</a> 
+						<a class="form_move" name="13_demote" onclick="demoteBlock(this);">&#9660;</a>
+						<a class="form_move" name="13_vis" onclick="toggleBlockVis(this);">Hide</a>
+						Class Features
+					</div>
+			
+				<span style="position:relative;">
+					<a name="13_0_delete" class="form_delete" onclick="deleteElement(this);">&#10008;</a>
+					<input type="text" class="form_input_text form_input_text_short" name="13_0_0" onkeyup="updateField(this);">
+					<div class="form_lable ">Class Feature Name:</div>
+					<textarea type="text" class="form_input_area" name="13_0_1" onkeyup="updateField(lineBreaker(this));"></textarea>
+					<div class="form_lable form_lable_multiline">Description:</div>
+				</span>
+			
+				</div><a class="form_add" onclick="addElement(this);" name="13_add">Add Class Feature</a><br>
+			
+				<div class="form_section">
+					<div class="form_section_head">
+						<a class="form_move" name="14_promote" onclick="promoteBlock(this);">&#9650;</a> 
+						<a class="form_move" name="14_demote" onclick="demoteBlock(this);">&#9660;</a>
+						<a class="form_move" name="14_vis" onclick="toggleBlockVis(this);">Hide</a>
+						Feats
+					</div>
+			
+				<span style="position:relative;">
+					<a name="14_0_delete" class="form_delete" onclick="deleteElement(this);">&#10008;</a>
+					<input type="text" class="form_input_text form_input_text_short" name="14_0_0" onkeyup="updateField(this);">
+					<div class="form_lable ">Feat Name:</div>
+					<textarea type="text" class="form_input_area" name="14_0_1" onkeyup="updateField(lineBreaker(this));"></textarea>
+					<div class="form_lable form_lable_multiline">Description:</div>
+				</span>
+			
+				</div><a class="form_add" onclick="addElement(this);" name="14_add">Add Feat</a><br>
+			
+				<div class="form_section">
+					<div class="form_section_head">
+						<a class="form_move" name="15_promote" onclick="promoteBlock(this);">&#9650;</a> 
+						<a class="form_move" name="15_demote" onclick="demoteBlock(this);">&#9660;</a>
+						<a class="form_move" name="15_vis" onclick="toggleBlockVis(this);">Hide</a>
+						Backgrounds
+					</div>
+			
+				<span style="position:relative;">
+					<a name="15_0_delete" class="form_delete" onclick="deleteElement(this);">&#10008;</a>
+					<input type="text" class="form_input_text form_input_text_short" name="15_0_0" onkeyup="updateField(this);">
+					<div class="form_lable ">Background Name:</div>
+					<textarea type="text" class="form_input_area" name="15_0_1" onkeyup="updateField(lineBreaker(this));"></textarea>
+					<div class="form_lable form_lable_multiline">Description:</div>
+				</span>
+			
+				</div><a class="form_add" onclick="addElement(this);" name="15_add">Add Background</a><br>
+			
+				<div style="height:5px;"></div>
+				</span>
+				<span id="holder_3" style="display: none;">
+			
+				<div class="form_section">
+					<div class="form_section_head">
+						<a class="form_move" name="17_promote" onclick="promoteBlock(this);">&#9650;</a> 
+						<a class="form_move" name="17_demote" onclick="demoteBlock(this);">&#9660;</a>
+						<a class="form_move" name="17_vis" onclick="toggleBlockVis(this);">Hide</a>
+						At-Will Powers
+					</div>
+			
+				<span style="position:relative;">
+					<a name="17_0_delete" class="form_delete" onclick="deleteElement(this);">&#10008;</a>
+					<input type="text" class="form_input_text form_input_text_short" name="17_0_0" onkeyup="updateField(this);">
+					<div class="form_lable ">Power Name:</div>
+					<textarea type="text" class="form_input_area" name="17_0_1" onkeyup="updateField(lineBreaker(this));"></textarea>
+					<div class="form_lable form_lable_multiline">Description:</div>
+				</span>
+			
+				</div><a class="form_add" onclick="addElement(this);" name="17_add">Add At-Will Power</a><br>
+			
+				<div class="form_section">
+					<div class="form_section_head">
+						<a class="form_move" name="18_promote" onclick="promoteBlock(this);">&#9650;</a> 
+						<a class="form_move" name="18_demote" onclick="demoteBlock(this);">&#9660;</a>
+						<a class="form_move" name="18_vis" onclick="toggleBlockVis(this);">Hide</a>
+						Encounter Powers
+					</div>
+			
+				<span style="position:relative;">
+					<a name="18_0_delete" class="form_delete" onclick="deleteElement(this);">&#10008;</a>
+					<input type="text" class="form_input_text form_input_text_short" name="18_0_0" onkeyup="updateField(this);">
+					<div class="form_lable ">Power Name:</div>
+					<textarea type="text" class="form_input_area" name="18_0_1" onkeyup="updateField(lineBreaker(this));"></textarea>
+					<div class="form_lable form_lable_multiline">Description:</div>
+				</span>
+			
+				</div><a class="form_add" onclick="addElement(this);" name="18_add">Add Encounter Power</a><br>
+			
+				<div class="form_section">
+					<div class="form_section_head">
+						<a class="form_move" name="19_promote" onclick="promoteBlock(this);">&#9650;</a> 
+						<a class="form_move" name="19_demote" onclick="demoteBlock(this);">&#9660;</a>
+						<a class="form_move" name="19_vis" onclick="toggleBlockVis(this);">Hide</a>
+						Daily Powers
+					</div>
+			
+				<span style="position:relative;">
+					<a name="19_0_delete" class="form_delete" onclick="deleteElement(this);">&#10008;</a>
+					<input type="text" class="form_input_text form_input_text_short" name="19_0_0" onkeyup="updateField(this);">
+					<div class="form_lable ">Power Name:</div>
+					<textarea type="text" class="form_input_area" name="19_0_1" onkeyup="updateField(lineBreaker(this));"></textarea>
+					<div class="form_lable form_lable_multiline">Description:</div>
+				</span>
+			
+				</div><a class="form_add" onclick="addElement(this);" name="19_add">Add Daily Power</a><br>
+			
+				<div class="form_section">
+					<div class="form_section_head">
+						<a class="form_move" name="20_promote" onclick="promoteBlock(this);">&#9650;</a> 
+						<a class="form_move" name="20_demote" onclick="demoteBlock(this);">&#9660;</a>
+						<a class="form_move" name="20_vis" onclick="toggleBlockVis(this);">Hide</a>
+						Attacks
+					</div>
+			
+				<span style="position:relative;">
+					<a name="20_0_delete" class="form_delete" onclick="deleteElement(this);">&#10008;</a>
+					<input type="text" class="form_input_text form_input_text_short" name="20_0_0" onkeyup="updateField(this);">
+					<div class="form_lable ">Name:</div>
+					<input type="text" class="form_input_text" name="20_0_1" onkeyup="updateField(this);"><div class="form_lable ">Attack Bonus:</div>
+					<input type="text" class="form_input_text" name="20_0_2" onkeyup="updateField(this);"><div class="form_lable ">Target Defense:</div>
+					<input type="text" class="form_input_text" name="20_0_3" onkeyup="updateField(this);"><div class="form_lable ">Damage:</div>
+				</span>
+			
+				</div><a class="form_add" onclick="addElement(this);" name="20_add">Add Attack</a><br>
+			
+				<div class="form_section">
+					<div class="form_section_head">
+						<a class="form_move" name="21_promote" onclick="promoteBlock(this);">&#9650;</a> 
+						<a class="form_move" name="21_demote" onclick="demoteBlock(this);">&#9660;</a>
+						<a class="form_move" name="21_vis" onclick="toggleBlockVis(this);">Hide</a>
+						Items
+					</div>
+			
+				<span style="position:relative;">
+					<a name="21_0_delete" class="form_delete" onclick="deleteElement(this);">&#10008;</a>
+					<input type="text" class="form_input_text form_input_text_short" name="21_0_0" onkeyup="updateField(this);">
+					<div class="form_lable ">Item Name:</div>
+					<textarea type="text" class="form_input_area" name="21_0_1" onkeyup="updateField(lineBreaker(this));"></textarea>
+					<div class="form_lable form_lable_multiline">Description:</div>
+				</span>
+			
+				</div><a class="form_add" onclick="addElement(this);" name="21_add">Add Item</a><br>
+			
+				<div class="form_section">
+					<div class="form_section_head">
+						<a class="form_move" name="22_promote" onclick="promoteBlock(this);">&#9650;</a> 
+						<a class="form_move" name="22_demote" onclick="demoteBlock(this);">&#9660;</a>
+						<a class="form_move" name="22_vis" onclick="toggleBlockVis(this);">Hide</a>
+						Money
+					</div>
+			
+					<input type="text" class="form_input_text" name="22_0_0" onkeyup="updateField(this);"><div class="form_lable ">Platinum:</div>
+					<input type="text" class="form_input_text" name="22_0_1" onkeyup="updateField(this);"><div class="form_lable ">Gold:</div>
+					<input type="text" class="form_input_text" name="22_0_2" onkeyup="updateField(this);"><div class="form_lable ">Silver:</div>
+					<input type="text" class="form_input_text" name="22_0_3" onkeyup="updateField(this);"><div class="form_lable ">Copper:</div>
+			
+				</div>
+			
+				<div class="form_section">
+					<div class="form_section_head">
+						<a class="form_move" name="23_promote" onclick="promoteBlock(this);">&#9650;</a> 
+						<a class="form_move" name="23_demote" onclick="demoteBlock(this);">&#9660;</a>
+						<a class="form_move" name="23_vis" onclick="toggleBlockVis(this);">Show</a>
+						Familiar
+					</div>
+			
+					<input type="text" class="form_input_text" name="23_0_0" onkeyup="updateField(this);"><div class="form_lable ">Name:</div>
+					<input type="text" class="form_input_text" name="23_0_1" onkeyup="updateField(this);"><div class="form_lable ">Type:</div>
+					<textarea type="text" class="form_input_area" name="23_0_2" onkeyup="updateField(lineBreaker(this));"></textarea>
+					<div class="form_lable form_lable_multiline">Description:</div>
+					<input type="text" class="form_input_text" name="23_0_3" onkeyup="updateField(this);"><div class="form_lable ">Senses:</div>
+					<input type="text" class="form_input_text" name="23_0_4" onkeyup="updateField(this);"><div class="form_lable ">Speed:</div>
+					<textarea type="text" class="form_input_area" name="23_0_5" onkeyup="updateField(lineBreaker(this));"></textarea>
+					<div class="form_lable form_lable_multiline">Constant Benefits:</div>
+					<textarea type="text" class="form_input_area" name="23_0_6" onkeyup="updateField(lineBreaker(this));"></textarea>
+					<div class="form_lable form_lable_multiline">Active Benefits:</div>
+			
+				</div>
+			
+				<div class="form_section">
+					<div class="form_section_head">
+						<a class="form_move" name="24_promote" onclick="promoteBlock(this);">&#9650;</a> 
+						<a class="form_move" name="24_demote" onclick="demoteBlock(this);">&#9660;</a>
+						<a class="form_move" name="24_vis" onclick="toggleBlockVis(this);">Show</a>
+						Notes
+					</div>
+			
+				<span style="position:relative;">
+					<a name="24_0_delete" class="form_delete" onclick="deleteElement(this);">&#10008;</a>
+					<input type="text" class="form_input_text form_input_text_short" name="24_0_0" onkeyup="updateField(this);">
+					<div class="form_lable ">Note Text:</div>
+				</span>
+			
+				</div><a class="form_add" onclick="addElement(this);" name="24_add">Add Note</a><br>
+			
+		<div style="height:5px;"></div>
+		</span>
+	</div>
+
+			</div>
+	
+			<!-- Right Side Display Block -->
+			<div class="page_right">
+			
+				<!-- Display Preview -->
+				<div id="display" class="page_display"><div style="font-family:arial;font-size:8pt;width:730px;line-height:normal;color:#000000;border-style:solid;border-width:1px;text-align:left;">
+	<div style="color:#FFFFFF;background-color:#666666;padding:4px 8px 5px 8px;font-size:10pt;">
+		<div style="float:right;">Level 1 Human Fighter</div>
+		<div style="font-weight:bold;">Default Name</div>
+	</div>
+	<span style="display:inline-block;width:232px;margin:8px 3px 1px 8px;vertical-align: top;">
+		<div style="width:232px;margin:0px 0px 8px 0px;">
+			<div style="background-color:#666666;padding:0px 2px 1px 5px;border-style:solid;border-width:1px;border-color:#000000;height:14px;font-size:8pt;">
+				<div style="background-color:#CCCCBB;text-align:center;padding:1px 2px 0px 0px;border-style:solid;border-width:1px;border-color:#000000;width:28px;height:17px;float:right;margin:-3px 0px 0px 0px;font-size:9pt;">-1</div>
+				<div style="background-color:#FFFFEE;text-align:center;padding:1px 0px 0px 0px;border-style:solid;border-width:1px;border-color:#000000;width:30px;height:17px;float:right;margin:-3px 3px 0px 0px;font-size:10pt;font-weight:bold;">8</div>
+				<span style="color:#FFFFFF; font-weight:bold;">Strength</span>
+			</div>
+		</div>
+		<div style="width:232px;margin:0px 0px 8px 0px;">
+			<div style="background-color:#666666;padding:0px 2px 1px 5px;border-style:solid;border-width:1px;border-color:#000000;height:14px;font-size:8pt;">
+				<div style="background-color:#CCCCBB;text-align:center;padding:1px 2px 0px 0px;border-style:solid;border-width:1px;border-color:#000000;width:28px;height:17px;float:right;margin:-3px 0px 0px 0px;font-size:9pt;">+0</div>
+				<div style="background-color:#FFFFEE;text-align:center;padding:1px 0px 0px 0px;border-style:solid;border-width:1px;border-color:#000000;width:30px;height:17px;float:right;margin:-3px 3px 0px 0px;font-size:10pt;font-weight:bold;">10</div>
+				<span style="color:#FFFFFF; font-weight:bold;">Constitution</span>
+			</div>
+		</div>
+		<div style="width:232px;margin:0px 0px 8px 0px;">
+			<div style="background-color:#666666;padding:0px 2px 1px 5px;border-style:solid;border-width:1px;border-color:#000000;height:14px;font-size:8pt;">
+				<div style="background-color:#CCCCBB;text-align:center;padding:1px 2px 0px 0px;border-style:solid;border-width:1px;border-color:#000000;width:28px;height:17px;float:right;margin:-3px 0px 0px 0px;font-size:9pt;">+0</div>
+				<div style="background-color:#FFFFEE;text-align:center;padding:1px 0px 0px 0px;border-style:solid;border-width:1px;border-color:#000000;width:30px;height:17px;float:right;margin:-3px 3px 0px 0px;font-size:10pt;font-weight:bold;">10</div>
+				<span style="color:#FFFFFF; font-weight:bold;">Dexterity</span>
+			</div>
+		</div>
+		<div style="width:232px;margin:0px 0px 8px 0px;">
+			<div style="background-color:#666666;padding:0px 2px 1px 5px;border-style:solid;border-width:1px;border-color:#000000;height:14px;font-size:8pt;">
+				<div style="background-color:#CCCCBB;text-align:center;padding:1px 2px 0px 0px;border-style:solid;border-width:1px;border-color:#000000;width:28px;height:17px;float:right;margin:-3px 0px 0px 0px;font-size:9pt;">+0</div>
+				<div style="background-color:#FFFFEE;text-align:center;padding:1px 0px 0px 0px;border-style:solid;border-width:1px;border-color:#000000;width:30px;height:17px;float:right;margin:-3px 3px 0px 0px;font-size:10pt;font-weight:bold;">10</div>
+				<span style="color:#FFFFFF; font-weight:bold;">Intelligence</span>
+			</div>
+		</div>
+		<div style="width:232px;margin:0px 0px 8px 0px;">
+			<div style="background-color:#666666;padding:0px 2px 1px 5px;border-style:solid;border-width:1px;border-color:#000000;height:14px;font-size:8pt;">
+				<div style="background-color:#CCCCBB;text-align:center;padding:1px 2px 0px 0px;border-style:solid;border-width:1px;border-color:#000000;width:28px;height:17px;float:right;margin:-3px 0px 0px 0px;font-size:9pt;">+0</div>
+				<div style="background-color:#FFFFEE;text-align:center;padding:1px 0px 0px 0px;border-style:solid;border-width:1px;border-color:#000000;width:30px;height:17px;float:right;margin:-3px 3px 0px 0px;font-size:10pt;font-weight:bold;">10</div>
+				<span style="color:#FFFFFF; font-weight:bold;">Wisdom</span>
+			</div>
+		</div>
+		<div style="width:232px;margin:0px 0px 8px 0px;">
+			<div style="background-color:#666666;padding:0px 2px 1px 5px;border-style:solid;border-width:1px;border-color:#000000;height:14px;font-size:8pt;">
+				<div style="background-color:#CCCCBB;text-align:center;padding:1px 2px 0px 0px;border-style:solid;border-width:1px;border-color:#000000;width:28px;height:17px;float:right;margin:-3px 0px 0px 0px;font-size:9pt;">+0</div>
+				<div style="background-color:#FFFFEE;text-align:center;padding:1px 0px 0px 0px;border-style:solid;border-width:1px;border-color:#000000;width:30px;height:17px;float:right;margin:-3px 3px 0px 0px;font-size:10pt;font-weight:bold;">10</div>
+				<span style="color:#FFFFFF; font-weight:bold;">Charisma</span>
+			</div>
+		</div>
+		<div style="width:230px;border-style:solid;border-width:1px;margin:0px 0px 8px 0px; margin:0px 0px 15px 0px;">
+			<div style="background-color:#666666;color:#FFFFFF;font-weight:bold;font-size:8pt;text-align:center;padding:0px 2px 1px 5px">HIT POINTS</div>
+			<div style="font-size:7pt;padding:3px 15px 4px 15px;background-color:#CCCCBB;height:22px;">
+				<div style="float:left;width:50px;text-align:center;">
+					Total<br>
+					<div style="width:40px;height:18px;padding:3px 0px 0px 0px;margin:0px 6px 0px 4px;text-align:center;font-size:10pt;background-color:#FFFFEE;color:#000000;border-style:solid;border-width:1px;border-color:#000000; font-weight:bold;">1</div>
+				</div>
+				<div style="float:left;width:50px;text-align:center;">
+					Bloodied<br>
+					<div style="width:40px;height:18px;padding:3px 0px 0px 0px;margin:0px 6px 0px 4px;text-align:center;font-size:10pt;background-color:#FFFFEE;color:#000000;border-style:solid;border-width:1px;border-color:#000000;">0</div>
+				</div>
+				<div style="float:left;width:50px;text-align:center;">
+					Surges<br>
+					<div style="width:40px;height:18px;padding:3px 0px 0px 0px;margin:0px 6px 0px 4px;text-align:center;font-size:10pt;background-color:#FFFFEE;color:#000000;border-style:solid;border-width:1px;border-color:#000000;">0</div>
+				</div>
+				<div style="float:left;width:50px;text-align:center;">
+					Value<br>
+					<div style="width:40px;height:18px;padding:3px 0px 0px 0px;margin:0px 6px 0px 4px;text-align:center;font-size:10pt;background-color:#FFFFEE;color:#000000;border-style:solid;border-width:1px;border-color:#000000;">0</div>
+				</div>
+			</div>
+		</div>
+		<div style="width:230px;border-style:solid;border-width:1px;margin:0px 0px 8px 0px;">
+			<div style="background-color:#666666;color:#FFFFFF;font-weight:bold;font-size:8pt;text-align:center;padding:0px 2px 1px 5px">SAVE MODIFIERS</div>
+			<div style="padding:0px 5px 0px 5px;font-size:8pt;background-color:#CCCCBB;">Description.</div>
+		</div>
+		<div style="width:230px;border-style:solid;border-width:1px;margin:0px 0px 8px 0px;">
+			<div style="background-color:#666666;padding:0px 2px 1px 5px;height:15px;">
+				<div style="background-color:#FFFFEE;text-align:center;padding:1px 0px 0px 0px;border-style:solid;border-width:1px;border-color:#000000;width:30px;height:17px;float:right;margin:-3px 0px 0px 0px;font-size:10pt;font-weight:bold;">+0</div>
+				<span style="color:#FFFFFF; font-weight:bold;">Initiative</span>
+			</div>
+			<div style="font-size:7pt;padding:3px 0px 4px 8px;background-color:#CCCCBB;">
+			</div>
+		</div>
+		<div style="width:230px;border-style:solid;border-width:1px;margin:0px 0px 8px 0px;">
+			<div style="background-color:#666666;padding:0px 2px 1px 5px;height:15px;">
+				<div style="background-color:#FFFFEE;text-align:center;padding:1px 0px 0px 0px;border-style:solid;border-width:1px;border-color:#000000;width:30px;height:17px;float:right;margin:-3px 0px 0px 0px;font-size:10pt;font-weight:bold;">6</div>
+				<span style="color:#FFFFFF; font-weight:bold;">Speed</span>
+			</div>
+			<div style="font-size:7pt;padding:3px 0px 4px 8px;background-color:#CCCCBB;">
+			</div>
+		</div>
+		<div style="width:230px;border-style:solid;border-width:1px;margin:0px 0px 8px 0px;">
+			<div style="background-color:#666666;color:#FFFFFF;font-weight:bold;font-size:8pt;text-align:center;padding:0px 2px 1px 5px">SKILLS</div>
+			<div style="padding:0px 5px 0px 5px;font-size:8pt;background-color:#CCCCBB;"><div style="float:right;">+0</div>Acrobatics</div>
+			<div style="padding:0px 5px 0px 5px;font-size:8pt;background-color:#FFFFEE;"><div style="float:right;">+0</div>Arcana</div>
+			<div style="padding:0px 5px 0px 5px;font-size:8pt;background-color:#CCCCBB;"><div style="float:right;">+0</div>Athletics</div>
+			<div style="padding:0px 5px 0px 5px;font-size:8pt;background-color:#FFFFEE;"><div style="float:right;">+0</div>Bluff</div>
+			<div style="padding:0px 5px 0px 5px;font-size:8pt;background-color:#CCCCBB;"><div style="float:right;">+0</div>Diplomacy</div>
+			<div style="padding:0px 5px 0px 5px;font-size:8pt;background-color:#FFFFEE;"><div style="float:right;">+0</div>Dungeoneering</div>
+			<div style="padding:0px 5px 0px 5px;font-size:8pt;background-color:#CCCCBB;"><div style="float:right;">+0</div>Endurance</div>
+			<div style="padding:0px 5px 0px 5px;font-size:8pt;background-color:#FFFFEE;"><div style="float:right;">+0</div>Heal</div>
+			<div style="padding:0px 5px 0px 5px;font-size:8pt;background-color:#CCCCBB;"><div style="float:right;">+0</div>History</div>
+			<div style="padding:0px 5px 0px 5px;font-size:8pt;background-color:#FFFFEE;"><div style="float:right;">+0</div>Insight</div>
+			<div style="padding:0px 5px 0px 5px;font-size:8pt;background-color:#CCCCBB;"><div style="float:right;">+0</div>Intimidate</div>
+			<div style="padding:0px 5px 0px 5px;font-size:8pt;background-color:#FFFFEE;"><div style="float:right;">+0</div>Nature</div>
+			<div style="padding:0px 5px 0px 5px;font-size:8pt;background-color:#CCCCBB;"><div style="float:right;">+0</div>Perception</div>
+			<div style="padding:0px 5px 0px 5px;font-size:8pt;background-color:#FFFFEE;"><div style="float:right;">+0</div>Religion</div>
+			<div style="padding:0px 5px 0px 5px;font-size:8pt;background-color:#CCCCBB;"><div style="float:right;">+0</div>Stealth</div>
+			<div style="padding:0px 5px 0px 5px;font-size:8pt;background-color:#FFFFEE;"><div style="float:right;">+0</div>Streetwise</div>
+			<div style="padding:0px 5px 0px 5px;font-size:8pt;background-color:#CCCCBB;"><div style="float:right;">+0</div>Thievery</div>
+		</div>
+	</span>
+	<span style="display:inline-block;width:232px;margin:8px 3px 1px 3px;vertical-align: top;">
+		<div style="width:230px;border-style:solid;border-width:1px;margin:0px 0px 8px 0px;">
+			<div style="background-color:#666666;padding:0px 2px 1px 5px;height:15px;">
+				<div style="background-color:#FFFFEE;text-align:center;padding:1px 0px 0px 0px;border-style:solid;border-width:1px;border-color:#000000;width:30px;height:17px;float:right;margin:-3px 0px 0px 0px;font-size:10pt;font-weight:bold;">10</div>
+				<span style="color:#FFFFFF; font-weight:bold;">Armor Class</span>
+			</div>
+			<div style="font-size:7pt;padding:3px 0px 4px 8px;background-color:#CCCCBB;">
+			</div>
+		</div>
+		<div style="width:230px;border-style:solid;border-width:1px;margin:0px 0px 8px 0px;">
+			<div style="background-color:#666666;padding:0px 2px 1px 5px;height:15px;">
+				<div style="background-color:#FFFFEE;text-align:center;padding:1px 0px 0px 0px;border-style:solid;border-width:1px;border-color:#000000;width:30px;height:17px;float:right;margin:-3px 0px 0px 0px;font-size:10pt;font-weight:bold;">10</div>
+				<span style="color:#FFFFFF; font-weight:bold;">Fortitude</span>
+			</div>
+			<div style="font-size:7pt;padding:3px 0px 4px 8px;background-color:#CCCCBB;">
+			</div>
+		</div>
+		<div style="width:230px;border-style:solid;border-width:1px;margin:0px 0px 8px 0px;">
+			<div style="background-color:#666666;padding:0px 2px 1px 5px;height:15px;">
+				<div style="background-color:#FFFFEE;text-align:center;padding:1px 0px 0px 0px;border-style:solid;border-width:1px;border-color:#000000;width:30px;height:17px;float:right;margin:-3px 0px 0px 0px;font-size:10pt;font-weight:bold;">10</div>
+				<span style="color:#FFFFFF; font-weight:bold;">Reflex</span>
+			</div>
+			<div style="font-size:7pt;padding:3px 0px 4px 8px;background-color:#CCCCBB;">
+			</div>
+		</div>
+		<div style="width:230px;border-style:solid;border-width:1px;margin:0px 0px 8px 0px;">
+			<div style="background-color:#666666;padding:0px 2px 1px 5px;height:15px;">
+				<div style="background-color:#FFFFEE;text-align:center;padding:1px 0px 0px 0px;border-style:solid;border-width:1px;border-color:#000000;width:30px;height:17px;float:right;margin:-3px 0px 0px 0px;font-size:10pt;font-weight:bold;">10</div>
+				<span style="color:#FFFFFF; font-weight:bold;">Will</span>
+			</div>
+			<div style="font-size:7pt;padding:3px 0px 4px 8px;background-color:#CCCCBB;">
+			</div>
+		</div>
+		<div style="width:230px;border-style:solid;border-width:1px;margin:0px 0px 8px 0px;">
+			<div style="background-color:#666666;color:#FFFFFF;font-weight:bold;font-size:8pt;text-align:center;padding:0px 2px 1px 5px">RACE FEATURES</div>
+			<div style="background-color:#CCCCBB; padding:3px 5px 4px 5px;font-size:7pt;line-height:10px;">
+				<span style="font-size:8pt;font-weight:bold;line-height:13px;">Feature Name</span><br>Description
+			</div>
+		</div>
+		<div style="width:230px;border-style:solid;border-width:1px;margin:0px 0px 8px 0px;">
+			<div style="background-color:#666666;color:#FFFFFF;font-weight:bold;font-size:8pt;text-align:center;padding:0px 2px 1px 5px">CLASS FEATURES</div>
+			<div style="background-color:#CCCCBB; padding:3px 5px 4px 5px;font-size:7pt;line-height:10px;">
+				<span style="font-size:8pt;font-weight:bold;line-height:13px;">Feature Name</span><br>Description
+			</div>
+		</div>
+		<div style="width:230px;border-style:solid;border-width:1px;margin:0px 0px 8px 0px;">
+			<div style="background-color:#666666;color:#FFFFFF;font-weight:bold;font-size:8pt;text-align:center;padding:0px 2px 1px 5px">FEATS</div>
+			<div style="background-color:#CCCCBB; padding:3px 5px 4px 5px;font-size:7pt;line-height:10px;">
+				<span style="font-size:8pt;font-weight:bold;line-height:13px;">Feature Name</span><br>Description
+			</div>
+		</div>
+		<div style="width:230px;border-style:solid;border-width:1px;margin:0px 0px 8px 0px;">
+			<div style="background-color:#666666;color:#FFFFFF;font-weight:bold;font-size:8pt;text-align:center;padding:0px 2px 1px 5px">BACKGROUNDS</div>
+			<div style="background-color:#CCCCBB; padding:3px 5px 4px 5px;font-size:7pt;line-height:10px;">
+				<span style="font-size:8pt;font-weight:bold;line-height:13px;">Background Name</span><br>Description
+			</div>
+		</div>
+	</span>
+	<span style="display:inline-block;width:232px;margin:8px 8px 1px 3px;vertical-align: top;">
+		<div style="width:230px;border-style:solid;border-width:1px;margin:0px 0px 8px 0px;">
+			<div style="background-color:#666666;color:#FFFFFF;font-weight:bold;font-size:8pt;text-align:center;padding:0px 2px 1px 5px">AT-WILL POWERS</div>
+			<div style="background-color:#CCCCBB; padding:3px 5px 4px 5px;font-size:7pt;line-height:10px;">
+				<span style="font-size:8pt;font-weight:bold;line-height:13px;">Power Name</span><br>Description
+			</div>
+		</div>
+		<div style="width:230px;border-style:solid;border-width:1px;margin:0px 0px 8px 0px;">
+			<div style="background-color:#666666;color:#FFFFFF;font-weight:bold;font-size:8pt;text-align:center;padding:0px 2px 1px 5px">ENCOUNTER POWERS</div>
+			<div style="background-color:#CCCCBB; padding:3px 5px 4px 5px;font-size:7pt;line-height:10px;">
+				<span style="font-size:8pt;font-weight:bold;line-height:13px;">Power Name</span><br>Description
+			</div>
+		</div>
+		<div style="width:230px;border-style:solid;border-width:1px;margin:0px 0px 8px 0px;">
+			<div style="background-color:#666666;color:#FFFFFF;font-weight:bold;font-size:8pt;text-align:center;padding:0px 2px 1px 5px">DAILY POWERS</div>
+			<div style="background-color:#CCCCBB; padding:3px 5px 4px 5px;font-size:7pt;line-height:10px;">
+				<span style="font-size:8pt;font-weight:bold;line-height:13px;">Power Name</span><br>Description
+			</div>
+		</div>
+		<div style="width:230px;border-style:solid;border-width:1px;margin:0px 0px 8px 0px;">
+			<div style="background-color:#666666;color:#FFFFFF;font-weight:bold;font-size:8pt;text-align:center;padding:0px 2px 1px 5px">ATTACKS</div>
+			<div style="padding:0px 5px 0px 5px;font-size:8pt;background-color:#CCCCBB;">
+				<div style="float:right;width:60px;text-align:center;">1d4 + 0</div>
+				<div style="float:right;width:60px;text-align:center;">+0 vs AC</div>
+				Melee Basic
+			</div>
+		</div>
+		<div style="width:230px;border-style:solid;border-width:1px;margin:0px 0px 8px 0px;">
+			<div style="background-color:#666666;color:#FFFFFF;font-weight:bold;font-size:8pt;text-align:center;padding:0px 2px 1px 5px">EQUIPMENT</div>
+			<div style="background-color:#CCCCBB; padding:3px 5px 4px 5px;font-size:7pt;line-height:10px;">
+				<span style="font-size:8pt;font-weight:bold;line-height:13px;">Item Name</span><br>Description
+			</div>
+		</div>
+		<div style="width:230px;border-style:solid;border-width:1px;margin:0px 0px 8px 0px; margin:0px 0px 13px 0px;">
+			<div style="background-color:#666666;color:#FFFFFF;font-weight:bold;font-size:8pt;text-align:center;padding:0px 2px 1px 5px">MONEY</div>
+			<div style="font-size:7pt;padding:3px 0px 4px 2px;background-color:#CCCCBB;height:18px;">
+				<div style="float:left;width:56px;text-align:center;">
+					Platinum<br>
+					<div style="width:50px;height:14px;padding:1px 0px 0px 0px;margin:0px 3px 0px 3px;text-align:center;font-size:8pt;background-color:#FFFFEE;color:#000000;border-style:solid;border-width:1px;border-color:#000000;">0</div>
+				</div>
+				<div style="float:left;width:56px;text-align:center;">
+					Gold<br>
+					<div style="width:50px;height:14px;padding:1px 0px 0px 0px;margin:0px 3px 0px 3px;text-align:center;font-size:8pt;background-color:#FFFFEE;color:#000000;border-style:solid;border-width:1px;border-color:#000000;">100</div>
+				</div>
+				<div style="float:left;width:56px;text-align:center;">
+					Silver<br>
+					<div style="width:50px;height:14px;padding:1px 0px 0px 0px;margin:0px 3px 0px 3px;text-align:center;font-size:8pt;background-color:#FFFFEE;color:#000000;border-style:solid;border-width:1px;border-color:#000000;">0</div>
+				</div>
+				<div style="float:left;width:56px;text-align:center;">
+					Copper<br>
+					<div style="width:50px;height:14px;padding:1px 0px 0px 0px;margin:0px 3px 0px 3px;text-align:center;font-size:8pt;background-color:#FFFFEE;color:#000000;border-style:solid;border-width:1px;border-color:#000000;">0</div>
+				</div>
+			</div>
+		</div>
+	</span>
+</div></div>
+				
+			</div>
+			
+		</div>
+
+	
+
+</body></html>
