@@ -13,7 +13,7 @@
 .page_import { position: absolute; right: 28px; top: 10px; width: 100px; }
 
 /* Form Element Classes					*/
-.form_section { position: relative; width: 344px; margin: 5px 0px 0px 0px; padding: 2px 2px 0px 2px; background-color: #EEEEDD; border-style: solid; border-width: 1px; border-color: #000000; }
+.form_section { position: relative; float: left; width: 344px; margin: 5px; padding: 2px 2px 0px 2px; background-color: #EEEEDD; border-style: solid; border-width: 1px; border-color: #000000; }
 
 .form_section_head { font-size: 8pt; font-weight: bold; padding: 0px 0px 2px 5px; }
 
