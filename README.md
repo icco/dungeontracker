@@ -14,7 +14,7 @@ A tool for coordinating D&amp;D campaigns.
 
  * Character
    * User
-   * Data ?
+   * Data
    * Notes
    * Messages between DM and Character
 
