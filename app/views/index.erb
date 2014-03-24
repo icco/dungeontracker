@@ -1,8 +1,8 @@
+<div class="unit one-of-three"></div>
 <div class="unit one-of-three">
+  <p>Enter your email to see your character sheets.</p>
   <% form_tag url_for(:login), :method => 'post', :class => 'pure-form' do %>
-    <fieldset>
-      <%= text_field_tag :email, :placeholder => 'email' %>
-      <%= submit_tag "Login!", :class => "pure-button pure-button-primary" %>
-    </fieldset>
+    <%= text_field_tag :email, :placeholder => 'email', :class => 'login' %>
+    <%= submit_tag "Login!", :class => "pure-button pure-button-primary login" %>
   <% end %>
 </div>

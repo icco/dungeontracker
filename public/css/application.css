@@ -256,6 +256,8 @@ a.signup-button { background-color: #d87a68; color: white; padding: 8px 15px; di
 
 .large-input input { margin-bottom: 15px; width: 70%; }
 
+.login { margin: 5px 0; width: 100%; }
+
 .page_tab_selected { border-bottom-style: none; background-color: #BBBBBB; height: 18px; }
 
 .page_display { min-height: 200px; margin: 22px 0px 0px 0px; text-align: left; }

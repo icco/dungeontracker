@@ -21,3 +21,5 @@ a.signup-button { background-color: #d87a68; color: white; padding: 8px 15px; di
 .pure-button { border-radius: .24rem; font-size: .75rem; line-height: 2; }
 
 .large-input input { margin-bottom: 15px; width: 70%; }
+
+.login { margin: 5px 0; width: 100%; }
