@@ -1,5 +1,7 @@
 module DungeonTracker
   module Helpers
+    include FuzzyTimeHelper
+
     def authenticated?
       return !session[:user].nil?
     end
