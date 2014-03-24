@@ -8,7 +8,7 @@ module SassInitializer
     Sass::Plugin.options[:css_location]      = Padrino.root("public/css")
     Sass::Plugin.options[:full_exception]    = (Padrino.env == :development)
     Sass::Plugin.options[:never_update]      = (Padrino.env == :production)
-    Sass::Plugin.options[:style]             = :compact
+    Sass::Plugin.options[:style]             = :compressed
     Sass::Plugin.options[:template_location] = Padrino.root("app/css")
     app.use Sass::Plugin::Rack
   end
