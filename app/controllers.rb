@@ -2,11 +2,26 @@ DungeonTracker::App.controllers  do
   layout :main
 
   get :index do
-    render :index
+    if authenticated?
+      redirect url_for(:characters)
+    else
+      render :index
+    end
   end
 
   post :login do
-    # blah
+    @user = User.new_by_email params["email"]
+    session[:user] = @user.id
+    redirect url_for(:characters)
+  end
+
+  get :characters do
+    if authenticated?
+      @chars = Character.all
+      render :characters
+    else
+      redirect url_for(:index)
+    end
   end
 
   get :new_character do

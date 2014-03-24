@@ -1,0 +1,8 @@
+<div class="unit span-grid">
+  <ul>
+    <li><a href="<%= url_for(:new_character) %>">New Character</a></li>
+    <% @chars.each do |c| %>
+      <li><a href="<%= url_for(:view_character, :id => c.id) %>"><%= c.name %></a> - last modified: ...</li>
+    <% end %>
+  </ul>
+</div>
