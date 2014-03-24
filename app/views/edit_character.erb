@@ -1,201 +1,344 @@
-<div class="page_left">
-  <% form_tag url_for(:edit_character, :id => @c.id), :method => 'post', :class => 'pure-form' do %>
+<div class="unit span-grid">
+  <% form_tag url_for(:edit_character, :id => @c.id), :method => 'post', :class => 'pure-form pure-form-aligned' do %>
 
-    <!-- Form Block -->
-    <div id="form" class="page_form">
+    <fieldset class="form_section">
+      <legend>
+        Basics
+      </legend>
 
-      <div class="form_section">
-        <input type="text" class="form_input_text" name="name"><div class="form_label">Name:</div>
-        <input type="text" class="form_input_text" name="level"><div class="form_label">Level:</div>
-        <input type="text" class="form_input_text" name="race"><div class="form_label">Race:</div>
-        <input type="text" class="form_input_text" name="class"><div class="form_label">Class:</div>
-        <input type="text" class="form_input_text" name="age"><div class="form_label">Age:</div>
-        <input type="text" class="form_input_text" name="gender"><div class="form_label">Gender:</div>
-        <input type="text" class="form_input_text" name="diety"><div class="form_label">Diety:</div>
-        <input type="text" class="form_input_text" name="weight"><div class="form_label">Weight:</div>
-        <input type="text" class="form_input_text" name="height"><div class="form_label">Height:</div>
+      <div class="pure-control-group">
+        <label for="">Name:</label>
+        <input type="text" class="form_input_text" name="name">
       </div>
 
-      <div class="form_section">
-        <div class="form_section_head">
-          Attributes
-        </div>
-
-        <input type="text" class="form_input_text" name="attr_str"><div class="form_label">Strength:</div>
-        <input type="text" class="form_input_text" name="attr_con"><div class="form_label">Constitution:</div>
-        <input type="text" class="form_input_text" name="attr_dex"><div class="form_label">Dexterity:</div>
-        <input type="text" class="form_input_text" name="attr_int"><div class="form_label">Intelligence:</div>
-        <input type="text" class="form_input_text" name="attr_wis"><div class="form_label">Wisdom:</div>
-        <input type="text" class="form_input_text" name="attr_cha"><div class="form_label">Charisma:</div>
+      <div class="pure-control-group">
+        <label for="">Level:</label>
+        <input type="text" class="form_input_text" name="level">
       </div>
 
-      <div class="form_section">
-        <div class="form_section_head">
-          Hit Points
-        </div>
-
-        <input type="text" class="form_input_text" name="hp"><div class="form_label">Total HP:</div>
-        <input type="text" class="form_input_text" name="surges"><div class="form_label">Surges:</div>
+      <div class="pure-control-group">
+        <label for="">Race:</label>
+        <input type="text" class="form_input_text" name="race">
       </div>
 
-      <div class="form_section">
-        <div class="form_section_head">
-          Initiative
-        </div>
-
-        <input type="text" class="form_input_text" name="initiative"><div class="form_label">Initiative:</div>
+      <div class="pure-control-group">
+        <label for="">Class:</label>
+        <input type="text" class="form_input_text" name="class">
       </div>
 
-      <div class="form_section">
-        <div class="form_section_head">
-          Movement
-        </div>
-
-        <input type="text" class="form_input_text" name="speed"><div class="form_label">Speed:</div>
+      <div class="pure-control-group">
+        <label for="">Age:</label>
+        <input type="text" class="form_input_text" name="age">
       </div>
 
-      <div class="form_section">
-        <div class="form_section_head">
-          Skills
-        </div>
-
-        <input type="checkbox" class="form_input_text" name="skill_acrobatics"><div class="form_label">Acrobatics (Dex):</div>
-        <input type="checkbox" class="form_input_text" name="skill_arcana"><div class="form_label">Arcana (Int):</div>
-        <input type="checkbox" class="form_input_text" name="skill_athletics"><div class="form_label">Athletics (Str):</div>
-        <input type="checkbox" class="form_input_text" name="skill_bluff"><div class="form_label">Bluff (Cha):</div>
-        <input type="checkbox" class="form_input_text" name="skill_diplomacy"><div class="form_label">Diplomacy (Cha):</div>
-        <input type="checkbox" class="form_input_text" name="skill_dungeoneering"><div class="form_label">Dungeoneering (Wis):</div>
-        <input type="checkbox" class="form_input_text" name="skill_endurance"><div class="form_label">Endurance (Con):</div>
-        <input type="checkbox" class="form_input_text" name="skill_heal"><div class="form_label">Heal (Wis):</div>
-        <input type="checkbox" class="form_input_text" name="skill_history"><div class="form_label">History (Int):</div>
-        <input type="checkbox" class="form_input_text" name="skill_insight"><div class="form_label">Insight (Wis):</div>
-        <input type="checkbox" class="form_input_text" name="skill_intimidate"><div class="form_label">Intimidate (Cha):</div>
-        <input type="checkbox" class="form_input_text" name="skill_nature"><div class="form_label">Nature (Wis):</div>
-        <input type="checkbox" class="form_input_text" name="skill_perception"><div class="form_label">Perception (Wis):</div>
-        <input type="checkbox" class="form_input_text" name="skill_religion"><div class="form_label">Religion (Int):</div>
-        <input type="checkbox" class="form_input_text" name="skill_stealth"><div class="form_label">Stealth (Dex):</div>
-        <input type="checkbox" class="form_input_text" name="skill_streetwise"><div class="form_label">Streetwise (Cha):</div>
-        <input type="checkbox" class="form_input_text" name="skill_thievery"><div class="form_label">Thievery (Dex):</div>
+      <div class="pure-control-group">
+        <label for="">Gender:</label>
+        <input type="text" class="form_input_text" name="gender">
       </div>
 
-      <div style="height:5px;"></div>
-
-      <div class="form_section">
-        <div class="form_section_head">
-          Defenses
-        </div>
-
-        <input type="text" class="form_input_text" name="ac"><div class="form_label">Armor Class:</div>
-        <input type="text" class="form_input_text" name="fort"><div class="form_label">Fortitude:</div>
-        <input type="text" class="form_input_text" name="ref"><div class="form_label">Reflex:</div>
-        <input type="text" class="form_input_text" name="will"><div class="form_label">Will:</div>
+      <div class="pure-control-group">
+        <label for="">Diety:</label>
+        <input type="text" class="form_input_text" name="diety">
       </div>
 
-      <div class="form_section">
-        <div class="form_section_head">
-          Feats
-        </div>
+      <div class="pure-control-group">
+        <label for="">Weight:</label>
+        <input type="text" class="form_input_text" name="weight">
+      </div>
 
-        <span style="position:relative;">
-          <a class="form_delete" onclick="deleteElement(this);">x</a>
+      <div class="pure-control-group">
+        <label for="">Height:</label>
+        <input type="text" class="form_input_text" name="height">
+      </div>
+    </fieldset>
+
+    <fieldset class="form_section">
+      <legend>
+        Attributes
+      </legend>
+
+      <div class="pure-control-group">
+        <label for="">Strength:</label>
+        <input type="text" class="form_input_text" name="attr_str">
+      </div>
+
+      <div class="pure-control-group">
+        <label for="">Constitution:</label>
+        <input type="text" class="form_input_text" name="attr_con">
+      </div>
+
+      <div class="pure-control-group">
+        <label for="">Dexterity:</label>
+        <input type="text" class="form_input_text" name="attr_dex">
+      </div>
+
+      <div class="pure-control-group">
+        <label for="">Intelligence:</label>
+        <input type="text" class="form_input_text" name="attr_int">
+      </div>
+
+      <div class="pure-control-group">
+        <label for="">Wisdom:</label>
+        <input type="text" class="form_input_text" name="attr_wis">
+      </div>
+
+      <div class="pure-control-group">
+        <label for="">Charisma:</label>
+        <input type="text" class="form_input_text" name="attr_cha">
+      </div>
+    </fieldset>
+
+    <fieldset class="form_section">
+      <legend>
+        Hit Points
+      </legend>
+
+      <div class="pure-control-group">
+        <label for="">Total HP:</label>
+        <input type="text" class="form_input_text" name="hp">
+      </div>
+
+      <div class="pure-control-group">
+        <label for="">Surges:</label>
+        <input type="text" class="form_input_text" name="surges">
+      </div>
+    </fieldset>
+
+    <fieldset class="form_section">
+      <legend>
+        Initiative
+      </legend>
+
+      <div class="pure-control-group">
+        <label for="">Initiative:</label>
+        <input type="text" class="form_input_text" name="initiative">
+      </div>
+    </fieldset>
+
+    <fieldset class="form_section">
+      <legend>
+        Movement
+      </legend>
+
+      <div class="pure-control-group">
+        <label for="">Speed:</label>
+        <input type="text" class="form_input_text" name="speed">
+      </div>
+    </fieldset>
+
+    <fieldset class="form_section">
+      <legend>
+        Skills
+      </legend>
+
+      <label for="" class="pure-checkbox">Acrobatics (Dex):
+        <input type="checkbox" class="form_input_text" name="skill_acrobatics">
+      </label>
+      <label for="" class="pure-checkbox">Arcana (Int):
+        <input type="checkbox" class="form_input_text" name="skill_arcana">
+      </label>
+      <label for="" class="pure-checkbox">Athletics (Str):
+        <input type="checkbox" class="form_input_text" name="skill_athletics">
+      </label>
+      <label for="" class="pure-checkbox">Bluff (Cha):
+        <input type="checkbox" class="form_input_text" name="skill_bluff">
+      </label>
+      <label for="" class="pure-checkbox">Diplomacy (Cha):
+        <input type="checkbox" class="form_input_text" name="skill_diplomacy">
+      </label>
+      <label for="" class="pure-checkbox">Dungeoneering (Wis):
+        <input type="checkbox" class="form_input_text" name="skill_dungeoneering">
+      </label>
+      <label for="" class="pure-checkbox">Endurance (Con):
+        <input type="checkbox" class="form_input_text" name="skill_endurance">
+      </label>
+      <label for="" class="pure-checkbox">Heal (Wis):
+        <input type="checkbox" class="form_input_text" name="skill_heal">
+      </label>
+      <label for="" class="pure-checkbox">History (Int):
+        <input type="checkbox" class="form_input_text" name="skill_history">
+      </label>
+      <label for="" class="pure-checkbox">Insight (Wis):
+        <input type="checkbox" class="form_input_text" name="skill_insight">
+      </label>
+      <label for="" class="pure-checkbox">Intimidate (Cha):
+        <input type="checkbox" class="form_input_text" name="skill_intimidate">
+      </label>
+      <label for="" class="pure-checkbox">Nature (Wis):
+        <input type="checkbox" class="form_input_text" name="skill_nature">
+      </label>
+      <label for="" class="pure-checkbox">Perception (Wis):
+        <input type="checkbox" class="form_input_text" name="skill_perception">
+      </label>
+      <label for="" class="pure-checkbox">Religion (Int):
+        <input type="checkbox" class="form_input_text" name="skill_religion">
+      </label>
+      <label for="" class="pure-checkbox">Stealth (Dex):
+        <input type="checkbox" class="form_input_text" name="skill_stealth">
+      </label>
+      <label for="" class="pure-checkbox">Streetwise (Cha):
+        <input type="checkbox" class="form_input_text" name="skill_streetwise">
+      </label>
+      <label for="" class="pure-checkbox">Thievery (Dex):
+        <input type="checkbox" class="form_input_text" name="skill_thievery">
+      </label>
+    </fieldset>
+
+    <fieldset class="form_section">
+      <legend>
+        Defenses
+      </legend>
+
+      <div class="pure-control-group">
+        <label for="">Armor Class:</label>
+        <input type="text" class="form_input_text" name="ac">
+      </div>
+
+      <div class="pure-control-group">
+        <label for="">Fortitude:</label>
+        <input type="text" class="form_input_text" name="fort">
+      </div>
+
+      <div class="pure-control-group">
+        <label for="">Reflex:</label>
+        <input type="text" class="form_input_text" name="ref">
+      </div>
+
+      <div class="pure-control-group">
+        <label for="">Will:</label>
+        <input type="text" class="form_input_text" name="will">
+      </div>
+    </fieldset>
+
+    <fieldset class="form_section">
+      <legend>
+        Feats
+      </legend>
+
+      <span style="position:relative;">
+        <a class="form_delete" onclick="deleteElement(this);">x</a>
+        <div class="pure-control-group">
+          <label for="">Feat Name:</label>
           <input type="text" class="form_input_text form_input_text_short" name="feat_name[]">
-          <div class="form_label">Feat Name:</div>
+        </div>
+        <div class="pure-control-group">
+          <label for="feat_desc[]">Description:</label>
           <textarea type="text" class="form_input_area" name="feat_desc[]"></textarea>
-          <div class="form_labelform_lable_multiline">Description:</div>
-          <a class="form_add" onclick="addElement(this);">Add Feat</a><br>
-        </span>
-      </div>
-
-      <div class="form_section">
-        <div class="form_section_head">
-          Background
         </div>
+        <a class="form_add" onclick="addElement(this);">Add Feat</a><br>
+      </span>
+    </fieldset>
 
-        <textarea type="text" class="form_input_area" name="background"></textarea>
-      </div>
+    <fieldset class="form_section">
+      <legend>
+        At-Will Powers
+      </legend>
 
-      <div style="height:5px;"></div>
-
-      <div class="form_section">
-        <div class="form_section_head">
-          At-Will Powers
-        </div>
-
-        <span style="position:relative;">
-          <a class="form_delete" onclick="deleteElement(this);">x</a>
+      <span style="position:relative;">
+        <a class="form_delete" onclick="deleteElement(this);">x</a>
+        <div class="pure-control-group">
+          <label for="">Power Name:</label>
           <input type="text" class="form_input_text form_input_text_short" name="atwill_power_name[]">
-          <div class="form_label">Power Name:</div>
+        </div>
+        <div class="pure-control-group">
+          <label for"atwill_power_desc[]">Description:</label>
           <textarea type="text" class="form_input_area" name="atwill_power_desc[]"></textarea>
-          <div class="form_labelform_lable_multiline">Description:</div>
-          <a class="form_add" onclick="addElement(this);">Add At-Will Power</a><br>
-        </span>
-      </div>
-
-      <div class="form_section">
-        <div class="form_section_head">
-          Encounter Powers
         </div>
+        <a class="form_add" onclick="addElement(this);">Add At-Will Power</a><br>
+      </span>
+    </fieldset>
 
-        <span style="position:relative;">
-          <a class="form_delete" onclick="deleteElement(this);">x</a>
+    <fieldset class="form_section">
+      <legend>
+        Encounter Powers
+      </legend>
+
+      <span style="position:relative;">
+        <a class="form_delete" onclick="deleteElement(this);">x</a>
+        <div class="pure-control-group">
+          <label for="">Power Name:</label>
           <input type="text" class="form_input_text form_input_text_short" name="encounter_power_name[]">
-          <div class="form_label">Power Name:</div>
+        </div>
+        <div class="pure-control-group">
+          <label for="encounter_power_desc[]">Description:</label>
           <textarea type="text" class="form_input_area" name="encounter_power_desc[]"></textarea>
-          <div class="form_labelform_lable_multiline">Description:</div>
-          <a class="form_add" onclick="addElement(this);">Add Encounter Power</a><br>
-        </span>
-      </div>
-
-      <div class="form_section">
-        <div class="form_section_head">
-          Daily Powers
         </div>
+        <a class="form_add" onclick="addElement(this);">Add Encounter Power</a><br>
+      </span>
+    </fieldset>
 
-        <span style="position:relative;">
-          <a class="form_delete" onclick="deleteElement(this);">x</a>
+    <fieldset class="form_section">
+      <legend>
+        Daily Powers
+      </legend>
+
+      <span style="position:relative;">
+        <a class="form_delete" onclick="deleteElement(this);">x</a>
+        <div class="pure-control-group">
+          <label for="">Power Name:</label>
           <input type="text" class="form_input_text form_input_text_short" name="daily_power_name[]">
-          <div class="form_label">Power Name:</div>
+        </div>
+        <div class="pure-control-group">
+          <label for="daily_power_desc[]">Description:</label>
           <textarea type="text" class="form_input_area" name="daily_power_desc[]"></textarea>
-          <div class="form_labelform_lable_multiline">Description:</div>
-          <a class="form_add" onclick="addElement(this);">Add Daily Power</a><br>
-        </span>
-      </div>
-
-      <div class="form_section">
-        <div class="form_section_head">
-          Attacks
         </div>
+        <a class="form_add" onclick="addElement(this);">Add Daily Power</a><br>
+      </span>
+    </fieldset>
 
-        <span style="position:relative;">
-          <a class="form_delete" onclick="deleteElement(this);">x</a>
+    <fieldset class="form_section">
+      <legend>
+        Attacks
+      </legend>
+
+      <span style="position:relative;">
+        <a class="form_delete" onclick="deleteElement(this);">x</a>
+        <div class="pure-control-group">
+          <label for="">Name:</label>
           <input type="text" class="form_input_text form_input_text_short" name="attack_name[]">
-          <div class="form_label">Name:</div>
-          <input type="text" class="form_input_text" name="attack_attack"><div class="form_label">Attack:</div>
-          <input type="text" class="form_input_text" name="attack_defense"><div class="form_label">Defense:</div>
-          <input type="text" class="form_input_text" name="attack_damage"><div class="form_label">Damage:</div>
-          <a class="form_add" onclick="addElement(this);">Add Attack</a><br>
-        </span>
-      </div>
-
-      <div class="form_section">
-        <div class="form_section_head">
-          Equipment
         </div>
-
-        <textarea type="text" class="form_input_area" name="equipment"></textarea>
-      </div>
-
-      <div class="form_section">
-        <div class="form_section_head">
-          Notes
+        <div class="pure-control-group">
+          <label for="">Attack:</label>
+          <input type="text" class="form_input_text" name="attack_attack">
         </div>
+        <div class="pure-control-group">
+          <label for="">Defense:</label>
+          <input type="text" class="form_input_text" name="attack_defense">
+        </div>
+        <div class="pure-control-group">
+          <label for="">Damage:</label>
+          <input type="text" class="form_input_text" name="attack_damage">
+        </div>
+        <a class="form_add" onclick="addElement(this);">Add Attack</a><br>
+      </span>
+    </fieldset>
 
-        <textarea type="text" class="form_input_area" name="notes"></textarea>
-      </div>
+    <fieldset class="form_section">
+      <legend>
+        Equipment
+      </legend>
 
-      <div class="form_section">
-        <%= submit_tag "Save", :class => "pure-button pure-button-primary" %>
-      </div>
-    </div>
+      <textarea type="text" class="form_input_area" name="equipment"></textarea>
+    </fieldset>
+
+    <fieldset class="form_section">
+      <legend>
+        Notes
+      </legend>
+
+      <textarea type="text" class="form_input_area" name="notes"></textarea>
+    </fieldset>
+
+    <fieldset class="form_section">
+      <legend>
+        Background
+      </legend>
+
+      <textarea type="text" class="form_input_area" name="background"></textarea>
+    </fieldset>
+
+    <fieldset class="form_section">
+      <%= submit_tag "Save", :class => "pure-button pure-button-primary" %>
+    </fieldset>
   <% end %>
 </div>
