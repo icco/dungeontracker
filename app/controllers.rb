@@ -44,6 +44,7 @@ DungeonTracker::App.controllers  do
     if @c.nil?
       404
     else
+      p @c.data
       render :edit_character
     end
   end
@@ -53,7 +54,11 @@ DungeonTracker::App.controllers  do
     if @c.nil?
       404
     else
-      p params
+      params.delete "authenticity_token"
+      @c.name = params["name"]
+      @c.set_data(params, current_user)
+      @c.save
+
       redirect url_for(:edit_character, id: @c.id)
     end
   end

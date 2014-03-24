@@ -7,13 +7,13 @@
       </legend>
 
       <div class="pure-control-group">
-        <label for="">Name:</label>
-        <input type="text" class="form_input_text" name="name">
+        <label for="name">Name:</label>
+        <input type="text" class="form_input_text" name="name" value="<%= @c.name %>">
       </div>
 
       <div class="pure-control-group">
         <label for="">Level:</label>
-        <input type="text" class="form_input_text" name="level">
+        <input type="text" class="form_input_text" name="level" value="<%= @c.data["level"] %>">
       </div>
 
       <div class="pure-control-group">
