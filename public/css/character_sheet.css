@@ -17,9 +17,9 @@
 
 .form_section_head { font-size: 8pt; font-weight: bold; padding: 0px 0px 2px 5px; }
 
-.form_lable { width: 117px; height: 18px; padding: 2px 0px 0px 5px; margin: 0px 0px 2px 0px; background-color: #999999; font-size: 8pt; font-weight: bold; }
+.form_label { width: 117px; height: 18px; padding: 2px 0px 0px 5px; margin: 0px 0px 2px 0px; background-color: #999999; font-size: 8pt; font-weight: bold; }
 
-.form_lable_multiline { height: 34px; }
+.form_label_multiline { height: 34px; }
 
 .form_input_text { height: 16px; width: 213px; padding: 0px 0px 0px 3px; float: right; }
 
