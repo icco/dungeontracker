@@ -2,10 +2,9 @@ class User < ActiveRecord::Base
   has_many :characters
   validate :email, presence: true, email: true, uniqueness: true
 
-  def self.new_by_email email
-    user = User.new
-    user.email = email
-    user.save
+  def self.by_email email
+    user = User.find_or_create_by(email: email)
+    user.save if user.valid?
 
     user
   end

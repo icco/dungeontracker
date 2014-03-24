@@ -8,7 +8,7 @@ module DungeonTracker
       if session[:user].nil?
         return nil
       else
-        return User.factory session[:user]
+        return User.find(session[:user])
       end
     end
 

@@ -10,9 +10,17 @@ DungeonTracker::App.controllers  do
   end
 
   post :login do
-    @user = User.new_by_email params["email"]
+    @user = User.by_email params["email"]
     session[:user] = @user.id
     redirect url_for(:characters)
+  end
+
+  get :logout do
+    if session
+      session[:user] = nil
+    end
+
+    redirect url_for(:index)
   end
 
   get :characters do
@@ -26,6 +34,7 @@ DungeonTracker::App.controllers  do
 
   get :new_character do
     c = Character.new
+    c.user = current_user
     c.save
     redirect url_for(:edit_character, :id => c.id)
   end
