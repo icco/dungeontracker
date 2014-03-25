@@ -15,6 +15,11 @@
     <div class="container" role="main">
       <div class="grid">
         <header class="unit span-grid" role="banner">
+        <% if authenticated? %>
+          <div class="logout">
+            <a href="<%= url_for(:logout) %>">logout</a>
+          </div>
+        <% end %>
         <h1 class="site-title"><a href="<%= url(:index) %>">DungeonTracker</a></h1>
         <h2 class="site-tagline">Track dem Dungeons.</h2>
         </header>

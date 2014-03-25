@@ -48,6 +48,12 @@ pre {
   margin-right: -.05em;
 }
 
+header .logout {
+  float: right;
+  font-size: .75rem;
+  z-index: 10;
+}
+
 a.signup-button {
   background-color: $primary-link-color;
   color: $alt-link-color;
