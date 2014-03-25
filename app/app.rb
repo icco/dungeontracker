@@ -12,6 +12,7 @@ module DungeonTracker
     # Caching support.
     register Padrino::Cache
     enable :caching
+    use ActiveRecord::QueryCache
 
     ##
     # Application configuration options.
