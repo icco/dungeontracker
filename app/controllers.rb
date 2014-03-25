@@ -56,6 +56,11 @@ DungeonTracker::App.controllers  do
     else
       params.delete "authenticity_token"
       params.delete_if {|k,v| v.empty? }
+      params.each_pair do |k,v|
+        if v.is_a? Array
+          v.delete_if {|i| i.empty? }
+        end
+      end
       p params
       @c.name = params["name"]
       @c.set_data(params, current_user)
