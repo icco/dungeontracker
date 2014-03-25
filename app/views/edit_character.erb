@@ -227,7 +227,7 @@
             <textarea type="text" class="form_input_area" name="feat_desc[]"><%= @c.data["feat_desc"][i] %></textarea>
           </div>
         </span>
-      <% end %>
+      <% end if !@c.data["feat_name"].nil? %>
 
       <span style="position:relative;">
         <a class="form_delete" onclick="deleteElement(this);">x</a>
