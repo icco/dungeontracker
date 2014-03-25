@@ -44,7 +44,6 @@ DungeonTracker::App.controllers  do
     if @c.nil?
       404
     else
-      p @c.data
       render :edit_character
     end
   end
@@ -61,7 +60,6 @@ DungeonTracker::App.controllers  do
           v.delete_if {|i| i.empty? }
         end
       end
-      p params
       @c.name = params["name"]
       @c.set_data(params, current_user)
       @c.save
