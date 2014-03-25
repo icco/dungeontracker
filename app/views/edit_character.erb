@@ -191,22 +191,22 @@
 
       <div class="pure-control-group">
         <label for="">Armor Class:</label>
-        <input type="text" class="form_input_text" name="ac">
+        <input type="text" class="form_input_text" name="ac" value="<%= @c.data["ac"] %>">
       </div>
 
       <div class="pure-control-group">
         <label for="">Fortitude:</label>
-        <input type="text" class="form_input_text" name="fort">
+        <input type="text" class="form_input_text" name="fort" value="<%= @c.data["fort"] %>">
       </div>
 
       <div class="pure-control-group">
         <label for="">Reflex:</label>
-        <input type="text" class="form_input_text" name="ref">
+        <input type="text" class="form_input_text" name="ref" value="<%= @c.data["ref"] %>">
       </div>
 
       <div class="pure-control-group">
         <label for="">Will:</label>
-        <input type="text" class="form_input_text" name="will">
+        <input type="text" class="form_input_text" name="will" value="<%= @c.data["will"] %>">
       </div>
     </fieldset>
 
@@ -214,6 +214,20 @@
       <legend>
         Feats
       </legend>
+
+      <% @c.data["feat_name"].each_index do |i| %>
+        <span style="position:relative;">
+          <a class="form_delete" onclick="deleteElement(this);">x</a>
+          <div class="pure-control-group">
+            <label for="">Feat Name:</label>
+            <input type="text" class="form_input_text form_input_text_short" name="feat_name[]" value="<%= @c.data["feat_name"][i] %>">
+          </div>
+          <div class="pure-control-group">
+            <label for="feat_desc[]">Description:</label>
+            <textarea type="text" class="form_input_area" name="feat_desc[]"><%= @c.data["feat_desc"][i] %></textarea>
+          </div>
+        </span>
+      <% end %>
 
       <span style="position:relative;">
         <a class="form_delete" onclick="deleteElement(this);">x</a>
