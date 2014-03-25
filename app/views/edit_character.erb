@@ -248,6 +248,20 @@
         At-Will Powers
       </legend>
 
+      <% @c.data["atwill_power_name"].each_index do |i| %>
+        <span style="position:relative;">
+          <a class="form_delete" onclick="deleteElement(this);">x</a>
+          <div class="pure-control-group">
+            <label for="">Power Name:</label>
+            <input type="text" class="form_input_text form_input_text_short" name="atwill_power_name[]" value="<%= @c.data["atwill_power_name"][i] %>">
+          </div>
+          <div class="pure-control-group">
+            <label for"atwill_power_desc[]">Description:</label>
+            <textarea type="text" class="form_input_area" name="atwill_power_desc[]"><%= @c.data["atwill_power_desc"][i] %></textarea>
+          </div>
+        </span>
+      <% end if !@c.data["atwill_power_name"].nil? %>
+
       <span style="position:relative;">
         <a class="form_delete" onclick="deleteElement(this);">x</a>
         <div class="pure-control-group">
@@ -266,6 +280,20 @@
       <legend>
         Encounter Powers
       </legend>
+
+      <% @c.data["encounter_power_name"].each_index do |i| %>
+        <span style="position:relative;">
+          <a class="form_delete" onclick="deleteElement(this);">x</a>
+          <div class="pure-control-group">
+            <label for="">Power Name:</label>
+            <input type="text" class="form_input_text form_input_text_short" name="encounter_power_name[]" value="<%= @c.data["encounter_power_name"][i] %>">
+          </div>
+          <div class="pure-control-group">
+            <label for="encounter_power_desc[]">Description:</label>
+            <textarea type="text" class="form_input_area" name="encounter_power_desc[]"><%= @c.data["encounter_power_desc"][i] %></textarea>
+          </div>
+        </span>
+      <% end if !@c.data["encounter_power_name"].nil? %>
 
       <span style="position:relative;">
         <a class="form_delete" onclick="deleteElement(this);">x</a>
@@ -286,6 +314,20 @@
         Daily Powers
       </legend>
 
+      <% @c.data["daily_power_name"].each_index do |i| %>
+        <span style="position:relative;">
+          <a class="form_delete" onclick="deleteElement(this);">x</a>
+          <div class="pure-control-group">
+            <label for="">Power Name:</label>
+            <input type="text" class="form_input_text form_input_text_short" name="daily_power_name[]" value="<%= @c.data["daily_power_name"][i] %>">
+          </div>
+          <div class="pure-control-group">
+            <label for="daily_power_desc[]">Description:</label>
+            <textarea type="text" class="form_input_area" name="daily_power_desc[]"><%= @c.data["daily_power_desc"][i] %></textarea>
+          </div>
+        </span>
+      <% end if !@c.data["daily_power_name"].nil? %>
+
       <span style="position:relative;">
         <a class="form_delete" onclick="deleteElement(this);">x</a>
         <div class="pure-control-group">
@@ -305,6 +347,28 @@
         Attacks
       </legend>
 
+      <% @c.data["attack_name"].each_index do |i| %>
+        <span style="position:relative;">
+          <a class="form_delete" onclick="deleteElement(this);">x</a>
+          <div class="pure-control-group">
+            <label for="">Name:</label>
+            <input type="text" class="form_input_text form_input_text_short" name="attack_name[]" value="<%= @c.data["attack_name"][i] %>">
+          </div>
+          <div class="pure-control-group">
+            <label for="">Attack:</label>
+            <input type="text" class="form_input_text" name="attack_attack[]" value="<%= @c.data["attack_attack"][i] %>">
+          </div>
+          <div class="pure-control-group">
+            <label for="">Defense:</label>
+            <input type="text" class="form_input_text" name="attack_defense[]" value="<%= @c.data["attack_defense"][i] %>">
+          </div>
+          <div class="pure-control-group">
+            <label for="">Damage:</label>
+            <input type="text" class="form_input_text" name="attack_damage[]" value="<%= @c.data["attack_damage"][i] %>">
+          </div>
+        </span>
+      <% end if !@c.data["attack_name"].nil? %>
+
       <span style="position:relative;">
         <a class="form_delete" onclick="deleteElement(this);">x</a>
         <div class="pure-control-group">
@@ -313,15 +377,15 @@
         </div>
         <div class="pure-control-group">
           <label for="">Attack:</label>
-          <input type="text" class="form_input_text" name="attack_attack">
+          <input type="text" class="form_input_text" name="attack_attack[]">
         </div>
         <div class="pure-control-group">
           <label for="">Defense:</label>
-          <input type="text" class="form_input_text" name="attack_defense">
+          <input type="text" class="form_input_text" name="attack_defense[]">
         </div>
         <div class="pure-control-group">
           <label for="">Damage:</label>
-          <input type="text" class="form_input_text" name="attack_damage">
+          <input type="text" class="form_input_text" name="attack_damage[]">
         </div>
         <a class="form_add" onclick="addElement(this);">Add Attack</a><br>
       </span>
