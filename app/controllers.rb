@@ -54,8 +54,9 @@ DungeonTracker::App.controllers  do
     if @c.nil?
       404
     else
-      p params
       params.delete "authenticity_token"
+      params.delete_if {|k,v| v.empty? }
+      p params
       @c.name = params["name"]
       @c.set_data(params, current_user)
       @c.save
