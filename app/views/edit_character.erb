@@ -128,6 +128,32 @@
 
     <fieldset class="form_section">
       <legend>
+        Defenses
+      </legend>
+
+      <div class="pure-control-group">
+        <label for="">Armor Class:</label>
+        <input type="text" class="form_input_text" name="ac" value="<%= @c.data["ac"] %>">
+      </div>
+
+      <div class="pure-control-group">
+        <label for="">Fortitude:</label>
+        <input type="text" class="form_input_text" name="fort" value="<%= @c.data["fort"] %>">
+      </div>
+
+      <div class="pure-control-group">
+        <label for="">Reflex:</label>
+        <input type="text" class="form_input_text" name="ref" value="<%= @c.data["ref"] %>">
+      </div>
+
+      <div class="pure-control-group">
+        <label for="">Will:</label>
+        <input type="text" class="form_input_text" name="will" value="<%= @c.data["will"] %>">
+      </div>
+    </fieldset>
+
+    <fieldset class="form_section">
+      <legend>
         Skills
       </legend>
 
@@ -182,32 +208,6 @@
       <label for="" class="pure-checkbox">Thievery (Dex):
         <input type="checkbox" class="form_input_text" name="skill_thievery" <%= "checked" if !@c.data["skill_thievery"].nil? %>>
       </label>
-    </fieldset>
-
-    <fieldset class="form_section">
-      <legend>
-        Defenses
-      </legend>
-
-      <div class="pure-control-group">
-        <label for="">Armor Class:</label>
-        <input type="text" class="form_input_text" name="ac" value="<%= @c.data["ac"] %>">
-      </div>
-
-      <div class="pure-control-group">
-        <label for="">Fortitude:</label>
-        <input type="text" class="form_input_text" name="fort" value="<%= @c.data["fort"] %>">
-      </div>
-
-      <div class="pure-control-group">
-        <label for="">Reflex:</label>
-        <input type="text" class="form_input_text" name="ref" value="<%= @c.data["ref"] %>">
-      </div>
-
-      <div class="pure-control-group">
-        <label for="">Will:</label>
-        <input type="text" class="form_input_text" name="will" value="<%= @c.data["will"] %>">
-      </div>
     </fieldset>
 
     <fieldset class="form_section">
