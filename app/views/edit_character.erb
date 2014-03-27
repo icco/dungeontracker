@@ -416,7 +416,12 @@
     </fieldset>
 
     <fieldset class="form_section">
+      <div style="float: right;">
+        <a href="<%= url_for(:toggle_character, :id => @c.id) %>" class='pure-button pure-button-warning'>Toggle Visability</a>
+      </div>
+
       <%= submit_tag "Save", :class => "pure-button pure-button-primary" %>
     </fieldset>
   <% end %>
+
 </div>

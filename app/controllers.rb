@@ -25,7 +25,18 @@ DungeonTracker::App.controllers  do
 
   get :characters do
     if authenticated?
+      @chars = current_user.characters
+      current_user.save
+      render :characters
+    else
+      redirect url_for(:index)
+    end
+  end
+
+  get :all_characters, :map => '/characters/all' do
+    if authenticated?
       @chars = Character.all
+      current_user.save
       render :characters
     else
       redirect url_for(:index)
@@ -39,7 +50,19 @@ DungeonTracker::App.controllers  do
     redirect url_for(:edit_character, :id => c.id)
   end
 
-  get :edit_character, :map => '/character/:id' do
+  get :toggle_character, :map => '/character/:id/toggle' do
+    @c = Character.where(id: params[:id]).first
+    if @c.nil?
+      404
+    else
+      @c.hidden = !@c.hidden?
+      @c.save
+
+      redirect url_for(:characters)
+    end
+  end
+
+  get :edit_character, :map => '/character/:id/edit' do
     @c = Character.where(id: params[:id]).first
     if @c.nil?
       404
@@ -48,7 +71,7 @@ DungeonTracker::App.controllers  do
     end
   end
 
-  post :edit_character, :map => '/character/:id' do
+  post :edit_character, :map => '/character/:id/edit' do
     @c = Character.where(id: params[:id]).first
     if @c.nil?
       404

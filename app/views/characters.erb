@@ -2,7 +2,7 @@
   <ul>
     <li>Create a <a href="<%= url_for(:new_character) %>">new character</a>.</li>
     <% @chars.each do |c| %>
-      <li><a href="<%= url_for(:view_character, :id => c.id) %>"><%= c.name || c.id.to_words %></a> - last modified <%=ago c.last_modified %></li>
+      <li><strong><%= c.name || c.id.to_words %></strong> [ <a href="<%= url_for(:edit_character, :id => c.id) %>">edit</a> | <a href="<%= url_for(:view_character, :id => c.id) %>">view</a> <!--| history --> ] - last modified <%=ago c.last_modified %></li>
     <% end %>
   </ul>
 </div>

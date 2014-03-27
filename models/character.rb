@@ -1,6 +1,15 @@
 class Character < ActiveRecord::Base
   belongs_to :user
   validate :name, presence: true
+  after_initialize :init
+
+  def init
+    self.hidden ||= false
+  end
+
+  def hidden?
+    self.hidden ||= false
+  end
 
   def character_datum
     CharacterData.where(character_id: self.id).order(timestamp: :desc)

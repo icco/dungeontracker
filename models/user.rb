@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_many :characters
+  has_many :characters, -> { where hidden: false }, autosave: true
   validate :email, presence: true, email: true, uniqueness: true
 
   def self.by_email email
