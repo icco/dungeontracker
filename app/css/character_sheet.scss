@@ -6,3 +6,10 @@ textarea.form_input_area {
   width: 60%;
   min-height: 200px;
 }
+
+table {
+  td, th {
+    text-align: center;
+    padding: 3px;
+  }
+}

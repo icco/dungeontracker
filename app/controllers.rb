@@ -92,6 +92,11 @@ DungeonTracker::App.controllers  do
   end
 
   get :view_character, :map => '/character/:id' do
-    render :view_character
+    @c = Character.where(id: params[:id]).first
+    if @c.nil?
+      404
+    else
+      render :view_character
+    end
   end
 end

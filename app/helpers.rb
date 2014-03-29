@@ -35,6 +35,25 @@ module DungeonTracker
     def pluralize cnt, word
       ActionView::Base.new.pluralize(cnt, word).split(' ').last
     end
+
+    def mod number
+      val = (number.to_i - 10) / 2
+      val = "+#{val}" if val >= 0
+
+      val
+    end
+
+    def mkd text
+      markdown = Redcarpet::Markdown.new(
+        Redcarpet::Render::HTML,
+        autolink: true,
+        tables: true,
+        no_intra_emphasis: true,
+        strikethrough: true,
+        fenced_code_blocks: true)
+
+      markdown.render(text.to_s)
+    end
   end
 end
 

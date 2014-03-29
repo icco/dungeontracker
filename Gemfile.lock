@@ -74,7 +74,8 @@ GEM
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
-    rake (10.2.0)
+    rake (10.2.2)
+    redcarpet (3.1.1)
     sass (3.3.4)
     shotgun (0.9)
       rack (>= 1.0)
@@ -110,6 +111,7 @@ DEPENDENCIES
   pg
   rack-test
   rake
+  redcarpet
   sass
   shotgun
   thin
