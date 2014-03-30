@@ -66,7 +66,7 @@
       </tr>
       <tr>
         <td>
-          Constitution 
+          Constitution
         </td>
         <td>
           <%= @c.data["attr_con"] %>
@@ -122,28 +122,45 @@
     </table>
   </div>
 
-  <% @c.data["atwill_power_name"].each_index do |i| %>
-    <div class="unit one-of-three">
-      <h3><%= @c.data["atwill_power_name"][i] %></h3>
-      <div>
-        <%== mkd @c.data["atwill_power_desc"][i] %>
+  <div class="unit span-grid">
+    <legend>
+      At-Will Powers
+    </legend>
+    <% @c.data["atwill_power_name"].each_index do |i| %>
+      <div class="unit one-of-two">
+        <h3><%= @c.data["atwill_power_name"][i] %></h3>
+        <div>
+          <%== mkd @c.data["atwill_power_desc"][i] %>
+        </div>
       </div>
-    </div>
-  <% end if !@c.data["atwill_power_name"].nil? %>
-  <% @c.data["encounter_power_name"].each_index do |i| %>
-    <div class="unit one-of-three">
-      <h3><%= @c.data["encounter_power_name"][i] %></h3>
-      <div>
-        <%== mkd @c.data["encounter_power_desc"][i] %>
+    <% end if !@c.data["atwill_power_name"].nil? %>
+  </div>
+
+  <div class="unit span-grid">
+    <legend>
+      Encounter Powers
+    </legend>
+    <% @c.data["encounter_power_name"].each_index do |i| %>
+      <div class="unit one-of-two">
+        <h3><%= @c.data["encounter_power_name"][i] %></h3>
+        <div>
+          <%== mkd @c.data["encounter_power_desc"][i] %>
+        </div>
       </div>
-    </div>
-  <% end if !@c.data["encounter_power_name"].nil? %>
-  <% @c.data["daily_power_name"].each_index do |i| %>
-    <div class="unit one-of-three">
-      <h3><%= @c.data["daily_power_name"][i] %></h3>
-      <div>
-        <%== mkd @c.data["daily_power_desc"][i] %>
+    <% end if !@c.data["encounter_power_name"].nil? %>
+  </div>
+
+  <div class="unit span-grid">
+    <legend>
+      Daily Powers
+    </legend>
+    <% @c.data["daily_power_name"].each_index do |i| %>
+      <div class="unit one-of-two">
+        <h3><%= @c.data["daily_power_name"][i] %></h3>
+        <div>
+          <%== mkd @c.data["daily_power_desc"][i] %>
+        </div>
       </div>
-    </div>
-  <% end if !@c.data["daily_power_name"].nil? %>
+    <% end if !@c.data["daily_power_name"].nil? %>
+  </div>
 </div>
