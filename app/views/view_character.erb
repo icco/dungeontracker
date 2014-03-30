@@ -186,7 +186,7 @@
           Acrobatics (Dex):
         </td>
         <td>
-          <%= plus(mod(@c.data["attr_dex"]) + trained(@c.data["skill_acrobatics"]) + half(@c.data["level"])) %>
+          <%= plus(mod(@c.data["attr_dex"]) + trained(@c.data["skill_acrobatics"]) + half(@c.data["level"]) + @c.data["skill_misc_acrobatics"].to_i) %>
         </td>
       </tr>
       <tr>
@@ -194,7 +194,7 @@
           Arcana (Int):
         </td>
         <td>
-          <%= plus(mod(@c.data["attr_int"]) + trained(@c.data["skill_arcana"]) + half(@c.data["level"])) %>
+          <%= plus(mod(@c.data["attr_int"]) + trained(@c.data["skill_arcana"]) + half(@c.data["level"]) + @c.data["skill_misc_arcana"].to_i) %>
         </td>
       </tr>
       <tr>
@@ -202,7 +202,7 @@
           Athletics (Str):
         </td>
         <td>
-          <%= plus(mod(@c.data["attr_str"]) + trained(@c.data["skill_athletics"]) + half(@c.data["level"])) %>
+          <%= plus(mod(@c.data["attr_str"]) + trained(@c.data["skill_athletics"]) + half(@c.data["level"]) + @c.data["skill_misc_athletics"].to_i) %>
         </td>
       </tr>
       <tr>
@@ -210,7 +210,7 @@
           Bluff (Cha):
         </td>
         <td>
-          <%= plus(mod(@c.data["attr_cha"]) + trained(@c.data["skill_bluff"]) + half(@c.data["level"])) %>
+          <%= plus(mod(@c.data["attr_cha"]) + trained(@c.data["skill_bluff"]) + half(@c.data["level"]) + @c.data["skill_misc_bluff"].to_i) %>
         </td>
       </tr>
       <tr>
@@ -218,7 +218,7 @@
           Diplomacy (Cha):
         </td>
         <td>
-          <%= plus(mod(@c.data["attr_cha"]) + trained(@c.data["skill_diplomacy"]) + half(@c.data["level"])) %>
+          <%= plus(mod(@c.data["attr_cha"]) + trained(@c.data["skill_diplomacy"]) + half(@c.data["level"]) + @c.data["skill_misc_diplomacy"].to_i) %>
         </td>
       </tr>
       <tr>
@@ -226,7 +226,7 @@
           Dungeoneering (Wis):
         </td>
         <td>
-          <%= plus(mod(@c.data["attr_wis"]) + trained(@c.data["skill_dungeoneering"]) + half(@c.data["level"])) %>
+          <%= plus(mod(@c.data["attr_wis"]) + trained(@c.data["skill_dungeoneering"]) + half(@c.data["level"]) + @c.data["skill_misc_dungeoneering"].to_i) %>
         </td>
       </tr>
       <tr>
@@ -234,7 +234,7 @@
           Endurance (Con):
         </td>
         <td>
-          <%= plus(mod(@c.data["attr_con"]) + trained(@c.data["skill_endurance"]) + half(@c.data["level"])) %>
+          <%= plus(mod(@c.data["attr_con"]) + trained(@c.data["skill_endurance"]) + half(@c.data["level"]) + @c.data["skill_misc_endurance"].to_i) %>
         </td>
       </tr>
       <tr>
@@ -242,7 +242,7 @@
           Heal (Wis):
         </td>
         <td>
-          <%= plus(mod(@c.data["attr_wis"]) + trained(@c.data["skill_heal"]) + half(@c.data["level"])) %>
+          <%= plus(mod(@c.data["attr_wis"]) + trained(@c.data["skill_heal"]) + half(@c.data["level"]) + @c.data["skill_misc_heal"].to_i) %>
         </td>
       </tr>
       <tr>
@@ -250,7 +250,7 @@
           History (Int):
         </td>
         <td>
-          <%= plus(mod(@c.data["attr_int"]) + trained(@c.data["skill_history"]) + half(@c.data["level"])) %>
+          <%= plus(mod(@c.data["attr_int"]) + trained(@c.data["skill_history"]) + half(@c.data["level"]) + @c.data["skill_misc_history"].to_i) %>
         </td>
       </tr>
       <tr>
@@ -258,7 +258,7 @@
           Insight (Wis):
         </td>
         <td>
-          <%= plus(mod(@c.data["attr_wis"]) + trained(@c.data["skill_insight"]) + half(@c.data["level"])) %>
+          <%= plus(mod(@c.data["attr_wis"]) + trained(@c.data["skill_insight"]) + half(@c.data["level"]) + @c.data["skill_misc_insight"].to_i) %>
         </td>
       </tr>
       <tr>
@@ -266,7 +266,7 @@
           Intimidate (Cha):
         </td>
         <td>
-          <%= plus(mod(@c.data["attr_cha"]) + trained(@c.data["skill_intimidate"]) + half(@c.data["level"])) %>
+          <%= plus(mod(@c.data["attr_cha"]) + trained(@c.data["skill_intimidate"]) + half(@c.data["level"]) + @c.data["skill_misc_intimidate"].to_i) %>
         </td>
       </tr>
       <tr>
@@ -274,7 +274,7 @@
           Nature (Wis):
         </td>
         <td>
-          <%= plus(mod(@c.data["attr_wis"]) + trained(@c.data["skill_nature"]) + half(@c.data["level"])) %>
+          <%= plus(mod(@c.data["attr_wis"]) + trained(@c.data["skill_nature"]) + half(@c.data["level"]) + @c.data["skill_misc_nature"].to_i) %>
         </td>
       </tr>
       <tr>
@@ -282,7 +282,7 @@
           Perception (Wis):
         </td>
         <td>
-          <%= plus(mod(@c.data["attr_wis"]) + trained(@c.data["skill_perception"]) + half(@c.data["level"])) %>
+          <%= plus(mod(@c.data["attr_wis"]) + trained(@c.data["skill_perception"]) + half(@c.data["level"]) + @c.data["skill_misc_perception"].to_i) %>
         </td>
       </tr>
       <tr>
@@ -290,7 +290,7 @@
           Religion (Int):
         </td>
         <td>
-          <%= plus(mod(@c.data["attr_int"]) + trained(@c.data["skill_religion"]) + half(@c.data["level"])) %>
+          <%= plus(mod(@c.data["attr_int"]) + trained(@c.data["skill_religion"]) + half(@c.data["level"]) + @c.data["skill_misc_religion"].to_i) %>
         </td>
       </tr>
       <tr>
@@ -298,7 +298,7 @@
           Stealth (Dex):
         </td>
         <td>
-          <%= plus(mod(@c.data["attr_dex"]) + trained(@c.data["skill_stealth"]) + half(@c.data["level"])) %>
+          <%= plus(mod(@c.data["attr_dex"]) + trained(@c.data["skill_stealth"]) + half(@c.data["level"]) + @c.data["skill_misc_stealt"].to_i) %>
         </td>
       </tr>
       <tr>
@@ -306,7 +306,7 @@
           Streetwise (Cha):
         </td>
         <td>
-          <%= plus(mod(@c.data["attr_dex"]) + trained(@c.data["skill_streetwise"]) + half(@c.data["level"])) %>
+          <%= plus(mod(@c.data["attr_dex"]) + trained(@c.data["skill_streetwise"]) + half(@c.data["level"]) + @c.data["skill_misc_streetwise"].to_i) %>
         </td>
       </tr>
       <tr>
@@ -314,7 +314,7 @@
           Thievery (Dex):
         </td>
         <td>
-          <%= plus(mod(@c.data["attr_dex"]) + trained(@c.data["skill_thievery"]) + half(@c.data["level"])) %>
+          <%= plus(mod(@c.data["attr_dex"]) + trained(@c.data["skill_thievery"]) + half(@c.data["level"]) + @c.data["skill_misc_thievery"].to_i) %>
         </td>
       </tr>
     </table>
