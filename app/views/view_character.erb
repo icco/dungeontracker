@@ -8,6 +8,7 @@
       Basics
     </legend>
 
+    <ul>
     <li>
       Name: <%= @c.name %>
     </li>
@@ -39,6 +40,7 @@
     <li>
       Height: <%= @c.data["height"] %>
     </li>
+    </ul>
   </div>
   <div class="unit one-of-two">
     <table>
@@ -162,5 +164,29 @@
         </div>
       </div>
     <% end if !@c.data["daily_power_name"].nil? %>
+  </div>
+
+  <div class="unit span-grid">
+    <legend>
+      Equipment
+    </legend>
+
+    <div class="real-lists"><%== mkd @c.data["equipment"] %></div>
+  </div>
+
+  <div class="unit span-grid">
+    <legend>
+      Notes
+    </legend>
+
+    <div class="real-lists"><%==mkd @c.data["notes"] %></div>
+  </div>
+
+  <div class="unit span-grid">
+    <legend>
+      Background
+    </legend>
+
+    <div class="real-lists"><%==mkd @c.data["background"] %></div>
   </div>
 </div>
