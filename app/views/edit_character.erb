@@ -161,57 +161,172 @@
         Skills
       </legend>
 
-      <label for="" class="pure-checkbox">Acrobatics (Dex):
-        <input type="checkbox" class="form_input_text" name="skill_acrobatics" <%= "checked" if !@c.data["skill_acrobatics"].nil? %>>
-      </label>
-      <label for="" class="pure-checkbox">Arcana (Int):
-        <input type="checkbox" class="form_input_text" name="skill_arcana" <%= "checked" if !@c.data["skill_arcana"].nil? %>>
-      </label>
-      <label for="" class="pure-checkbox">Athletics (Str):
-        <input type="checkbox" class="form_input_text" name="skill_athletics" <%= "checked" if !@c.data["skill_athletics"].nil? %>>
-      </label>
-      <label for="" class="pure-checkbox">Bluff (Cha):
-        <input type="checkbox" class="form_input_text" name="skill_bluff" <%= "checked" if !@c.data["skill_bluff"].nil? %>>
-      </label>
-      <label for="" class="pure-checkbox">Diplomacy (Cha):
-        <input type="checkbox" class="form_input_text" name="skill_diplomacy" <%= "checked" if !@c.data["skill_diplomacy"].nil? %>>
-      </label>
-      <label for="" class="pure-checkbox">Dungeoneering (Wis):
-        <input type="checkbox" class="form_input_text" name="skill_dungeoneering" <%= "checked" if !@c.data["skill_dungeoneering"].nil? %>>
-      </label>
-      <label for="" class="pure-checkbox">Endurance (Con):
-        <input type="checkbox" class="form_input_text" name="skill_endurance" <%= "checked" if !@c.data["skill_endurance"].nil? %>>
-      </label>
-      <label for="" class="pure-checkbox">Heal (Wis):
-        <input type="checkbox" class="form_input_text" name="skill_heal" <%= "checked" if !@c.data["skill_heal"].nil? %>>
-      </label>
-      <label for="" class="pure-checkbox">History (Int):
-        <input type="checkbox" class="form_input_text" name="skill_history" <%= "checked" if !@c.data["skill_history"].nil? %>>
-      </label>
-      <label for="" class="pure-checkbox">Insight (Wis):
-        <input type="checkbox" class="form_input_text" name="skill_insight" <%= "checked" if !@c.data["skill_insight"].nil? %>>
-      </label>
-      <label for="" class="pure-checkbox">Intimidate (Cha):
-        <input type="checkbox" class="form_input_text" name="skill_intimidate" <%= "checked" if !@c.data["skill_intimidate"].nil? %>>
-      </label>
-      <label for="" class="pure-checkbox">Nature (Wis):
-        <input type="checkbox" class="form_input_text" name="skill_nature" <%= "checked" if !@c.data["skill_nature"].nil? %>>
-      </label>
-      <label for="" class="pure-checkbox">Perception (Wis):
-        <input type="checkbox" class="form_input_text" name="skill_perception" <%= "checked" if !@c.data["skill_perception"].nil? %>>
-      </label>
-      <label for="" class="pure-checkbox">Religion (Int):
-        <input type="checkbox" class="form_input_text" name="skill_religion" <%= "checked" if !@c.data["skill_religion"].nil? %>>
-      </label>
-      <label for="" class="pure-checkbox">Stealth (Dex):
-        <input type="checkbox" class="form_input_text" name="skill_stealth" <%= "checked" if !@c.data["skill_stealth"].nil? %>>
-      </label>
-      <label for="" class="pure-checkbox">Streetwise (Cha):
-        <input type="checkbox" class="form_input_text" name="skill_streetwise" <%= "checked" if !@c.data["skill_streetwise"].nil? %>>
-      </label>
-      <label for="" class="pure-checkbox">Thievery (Dex):
-        <input type="checkbox" class="form_input_text" name="skill_thievery" <%= "checked" if !@c.data["skill_thievery"].nil? %>>
-      </label>
+      <table>
+        <tr>
+          <th>
+          </th>
+          <th>
+            Trained?
+          </th>
+          <th>
+            Other Bonuses
+          </th>
+        </tr>
+
+        <tr>
+          <td>Acrobatics (Dex):</td>
+          <td>
+            <input type="checkbox"  name="skill_acrobatics" <%= "checked" if !@c.data["skill_acrobatics"].nil? %>>
+          </td>
+          <td>
+            <input type="text" class="form_input_text" name="skill_misc_acrobatics" value="<%= @c.data["skill_misc_acrobatics"] %>">
+          </td>
+        </tr>
+        <tr>
+          <td>Arcana (Int):</td>
+          <td>
+            <input type="checkbox"  name="skill_arcana" <%= "checked" if !@c.data["skill_arcana"].nil? %>>
+          </td>
+          <td>
+            <input type="text" class="form_input_text" name="skill_misc_arcana" value="<%= @c.data["skill_misc_arcana"] %>">
+          </td>
+        </tr>
+        <tr>
+          <td>Athletics (Str):</td>
+          <td>
+            <input type="checkbox"  name="skill_athletics" <%= "checked" if !@c.data["skill_athletics"].nil? %>>
+          </td>
+          <td>
+            <input type="text" class="form_input_text" name="skill_misc_athletics" value="<%= @c.data["skill_misc_athletics"] %>">
+          </td>
+        </tr>
+        <tr>
+          <td>Bluff (Cha):</td>
+          <td>
+            <input type="checkbox"  name="skill_bluff" <%= "checked" if !@c.data["skill_bluff"].nil? %>>
+          </td>
+          <td>
+            <input type="text" class="form_input_text" name="skill_misc_bluff" value="<%= @c.data["skill_misc_bluff"] %>">
+          </td>
+        </tr>
+        <tr>
+          <td>Diplomacy (Cha):</td>
+          <td>
+            <input type="checkbox"  name="skill_diplomacy" <%= "checked" if !@c.data["skill_diplomacy"].nil? %>>
+          </td>
+          <td>
+            <input type="text" class="form_input_text" name="skill_misc_diplomacy" value="<%= @c.data["skill_misc_diplomacy"] %>">
+          </td>
+        </tr>
+        <tr>
+          <td>Dungeoneering (Wis):</td>
+          <td>
+            <input type="checkbox"  name="skill_dungeoneering" <%= "checked" if !@c.data["skill_dungeoneering"].nil? %>>
+          </td>
+          <td>
+            <input type="text" class="form_input_text" name="skill_misc_dungeoneering" value="<%= @c.data["skill_misc_dungeoneering"] %>">
+          </td>
+        </tr>
+        <tr>
+          <td>Endurance (Con):</td>
+          <td>
+            <input type="checkbox"  name="skill_endurance" <%= "checked" if !@c.data["skill_endurance"].nil? %>>
+          </td>
+          <td>
+            <input type="text" class="form_input_text" name="skill_misc_endurance" value="<%= @c.data["skill_misc_endurance"] %>">
+          </td>
+        </tr>
+        <tr>
+          <td>Heal (Wis):</td>
+          <td>
+            <input type="checkbox"  name="skill_heal" <%= "checked" if !@c.data["skill_heal"].nil? %>>
+          </td>
+          <td>
+            <input type="text" class="form_input_text" name="skill_misc_heal" value="<%= @c.data["skill_misc_heal"] %>">
+          </td>
+        </tr>
+        <tr>
+          <td>History (Int):</td>
+          <td>
+            <input type="checkbox"  name="skill_history" <%= "checked" if !@c.data["skill_history"].nil? %>>
+          </td>
+          <td>
+            <input type="text" class="form_input_text" name="skill_misc_history" value="<%= @c.data["skill_misc_history"] %>">
+          </td>
+        </tr>
+        <tr>
+          <td>Insight (Wis):</td>
+          <td>
+            <input type="checkbox"  name="skill_insight" <%= "checked" if !@c.data["skill_insight"].nil? %>>
+          </td>
+          <td>
+            <input type="text" class="form_input_text" name="skill_misc_insight" value="<%= @c.data["skill_misc_insight"] %>">
+          </td>
+        </tr>
+        <tr>
+          <td>Intimidate (Cha):</td>
+          <td>
+            <input type="checkbox"  name="skill_intimidate" <%= "checked" if !@c.data["skill_intimidate"].nil? %>>
+          </td>
+          <td>
+            <input type="text" class="form_input_text" name="skill_misc_intimidate" value="<%= @c.data["skill_misc_intimidate"] %>">
+          </td>
+        </tr>
+        <tr>
+          <td>Nature (Wis):</td>
+          <td>
+            <input type="checkbox"  name="skill_nature" <%= "checked" if !@c.data["skill_nature"].nil? %>>
+          </td>
+          <td>
+            <input type="text" class="form_input_text" name="skill_misc_nature" value="<%= @c.data["skill_misc_nature"] %>">
+          </td>
+        </tr>
+        <tr>
+          <td>Perception (Wis):</td>
+          <td>
+            <input type="checkbox"  name="skill_perception" <%= "checked" if !@c.data["skill_perception"].nil? %>>
+          </td>
+          <td>
+            <input type="text" class="form_input_text" name="skill_misc_perception" value="<%= @c.data["skill_misc_perception"] %>">
+          </td>
+        </tr>
+        <tr>
+          <td>Religion (Int):</td>
+          <td>
+            <input type="checkbox"  name="skill_religion" <%= "checked" if !@c.data["skill_religion"].nil? %>>
+          </td>
+          <td>
+            <input type="text" class="form_input_text" name="skill_misc_religion" value="<%= @c.data["skill_misc_religion"] %>">
+          </td>
+        </tr>
+        <tr>
+          <td>Stealth (Dex):</td>
+          <td>
+            <input type="checkbox"  name="skill_stealth" <%= "checked" if !@c.data["skill_stealth"].nil? %>>
+          </td>
+          <td>
+            <input type="text" class="form_input_text" name="skill_misc_religion" value="<%= @c.data["skill_misc_relgion"] %>">
+          </td>
+        </tr>
+        <tr>
+          <td>Streetwise (Cha):</td>
+          <td>
+            <input type="checkbox"  name="skill_streetwise" <%= "checked" if !@c.data["skill_streetwise"].nil? %>>
+          </td>
+          <td>
+            <input type="text" class="form_input_text" name="skill_misc_streetwise" value="<%= @c.data["skill_misc_streetwise"] %>">
+          </td>
+        </tr>
+        <tr>
+          <td>Thievery (Dex):</td>
+          <td>
+            <input type="checkbox"  name="skill_thievery" <%= "checked" if !@c.data["skill_thievery"].nil? %>>
+          </td>
+          <td>
+            <input type="text" class="form_input_text" name="skill_misc_thievery" value="<%= @c.data["skill_misc_thievery"] %>">
+          </td>
+        </tr>
+      </table>
     </fieldset>
 
     <fieldset class="form_section">
