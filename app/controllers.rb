@@ -44,50 +44,66 @@ DungeonTracker::App.controllers  do
   end
 
   get :new_character do
-    c = Character.new
-    c.user = current_user
-    c.save
-    redirect url_for(:edit_character, :id => c.id)
+    if authenticated?
+      c = Character.new
+      c.user = current_user
+      c.save
+      redirect url_for(:edit_character, :id => c.id)
+    else
+      404
+    end
   end
 
   get :toggle_character, :map => '/character/:id/toggle' do
-    @c = Character.where(id: params[:id]).first
-    if @c.nil?
-      404
-    else
-      @c.hidden = !@c.hidden?
-      @c.save
+    if authenticated?
+      @c = Character.where(id: params[:id]).first
+      if @c.nil?
+        404
+      else
+        @c.hidden = !@c.hidden?
+        @c.save
 
-      redirect url_for(:characters)
+        redirect url_for(:characters)
+      end
+    else
+      404
     end
   end
 
   get :edit_character, :map => '/character/:id/edit' do
-    @c = Character.where(id: params[:id]).first
-    if @c.nil?
-      404
+    if authenticated?
+      @c = Character.where(id: params[:id]).first
+      if @c.nil?
+        404
+      else
+        render :edit_character
+      end
     else
-      render :edit_character
+      redirect url_for(:index)
     end
   end
 
   post :edit_character, :map => '/character/:id/edit' do
-    @c = Character.where(id: params[:id]).first
-    if @c.nil?
-      404
-    else
-      params.delete "authenticity_token"
-      params.delete_if {|k,v| v.empty? }
-      params.each_pair do |k,v|
-        if v.is_a? Array
-          v.delete_if {|i| i.empty? }
+    if authenticated?
+      @c = Character.where(id: params[:id]).first
+      if @c.nil?
+        404
+      else
+        params.delete "authenticity_token"
+        params.delete_if {|k,v| v.empty? }
+        params.each_pair do |k,v|
+          if v.is_a? Array
+            v.delete_if {|i| i.empty? }
+          end
         end
-      end
-      @c.name = params["name"]
-      @c.set_data(params, current_user)
-      @c.save
+        @c.name = params["name"]
+        @c.set_data(params, current_user)
+        @c.save
 
-      redirect url_for(:edit_character, id: @c.id)
+        redirect url_for(:edit_character, id: @c.id)
+      end
+    else
+      403
     end
   end
 
