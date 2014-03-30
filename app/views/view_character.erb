@@ -167,6 +167,159 @@
     </table>
   </div>
 
+  <div class="unit one-of-two">
+    <legend>
+      Skills
+    </legend>
+
+    <table>
+      <tr>
+        <th>
+          Skill Name
+        </th>
+        <th>
+          Mod
+        </th>
+      </tr>
+      <tr>
+        <td>
+          Acrobatics (Dex):
+        </td>
+        <td>
+          <%= plus(mod(@c.data["attr_dex"]) + trained(@c.data["skill_acrobatics"]) + half(@c.data["level"])) %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Arcana (Int):
+        </td>
+        <td>
+          <%= plus(mod(@c.data["attr_int"]) + trained(@c.data["skill_arcana"]) + half(@c.data["level"])) %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Athletics (Str):
+        </td>
+        <td>
+          <%= plus(mod(@c.data["attr_str"]) + trained(@c.data["skill_athletics"]) + half(@c.data["level"])) %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Bluff (Cha):
+        </td>
+        <td>
+          <%= plus(mod(@c.data["attr_cha"]) + trained(@c.data["skill_bluff"]) + half(@c.data["level"])) %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Diplomacy (Cha):
+        </td>
+        <td>
+          <%= plus(mod(@c.data["attr_cha"]) + trained(@c.data["skill_diplomacy"]) + half(@c.data["level"])) %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Dungeoneering (Wis):
+        </td>
+        <td>
+          <%= plus(mod(@c.data["attr_wis"]) + trained(@c.data["skill_dungeoneering"]) + half(@c.data["level"])) %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Endurance (Con):
+        </td>
+        <td>
+          <%= plus(mod(@c.data["attr_con"]) + trained(@c.data["skill_endurance"]) + half(@c.data["level"])) %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Heal (Wis):
+        </td>
+        <td>
+          <%= plus(mod(@c.data["attr_wis"]) + trained(@c.data["skill_heal"]) + half(@c.data["level"])) %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          History (Int):
+        </td>
+        <td>
+          <%= plus(mod(@c.data["attr_int"]) + trained(@c.data["skill_history"]) + half(@c.data["level"])) %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Insight (Wis):
+        </td>
+        <td>
+          <%= plus(mod(@c.data["attr_wis"]) + trained(@c.data["skill_insight"]) + half(@c.data["level"])) %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Intimidate (Cha):
+        </td>
+        <td>
+          <%= plus(mod(@c.data["attr_cha"]) + trained(@c.data["skill_intimidate"]) + half(@c.data["level"])) %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Nature (Wis):
+        </td>
+        <td>
+          <%= plus(mod(@c.data["attr_wis"]) + trained(@c.data["skill_nature"]) + half(@c.data["level"])) %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Perception (Wis):
+        </td>
+        <td>
+          <%= plus(mod(@c.data["attr_wis"]) + trained(@c.data["skill_perception"]) + half(@c.data["level"])) %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Religion (Int):
+        </td>
+        <td>
+          <%= plus(mod(@c.data["attr_int"]) + trained(@c.data["skill_religion"]) + half(@c.data["level"])) %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Stealth (Dex):
+        </td>
+        <td>
+          <%= plus(mod(@c.data["attr_dex"]) + trained(@c.data["skill_stealth"]) + half(@c.data["level"])) %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Streetwise (Cha):
+        </td>
+        <td>
+          <%= plus(mod(@c.data["attr_dex"]) + trained(@c.data["skill_streetwise"]) + half(@c.data["level"])) %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Thievery (Dex):
+        </td>
+        <td>
+          <%= plus(mod(@c.data["attr_dex"]) + trained(@c.data["skill_thievery"]) + half(@c.data["level"])) %>
+        </td>
+      </tr>
+    </table>
+  </div>
+
   <div class="unit span-grid block">
     <legend>
       Attacks

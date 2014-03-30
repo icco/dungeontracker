@@ -36,6 +36,14 @@ module DungeonTracker
       ActionView::Base.new.pluralize(cnt, word).split(' ').last
     end
 
+    def trained val
+      if val.nil?
+        0
+      else
+        5
+      end
+    end
+
     def mod number
       val = (number.to_i - 10) / 2
     end
@@ -56,6 +64,10 @@ module DungeonTracker
         fenced_code_blocks: true)
 
       markdown.render(text.to_s)
+    end
+
+    def half level
+      (level.to_i / 2)
     end
   end
 end
