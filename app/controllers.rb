@@ -96,6 +96,8 @@ DungeonTracker::App.controllers  do
             v.delete_if {|i| i.empty? }
           end
         end
+
+        @c.user = User.by_email params["email"]
         @c.name = params["name"]
         @c.set_data(params, current_user)
         @c.save

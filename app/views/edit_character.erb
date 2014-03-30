@@ -11,6 +11,11 @@
       </legend>
 
       <div class="pure-control-group">
+        <label for="name">Player Email:</label>
+        <input type="text" class="form_input_text" name="email" value="<%= @c.user.email %>">
+      </div>
+
+      <div class="pure-control-group">
         <label for="name">Name:</label>
         <input type="text" class="form_input_text" name="name" value="<%= @c.name %>">
       </div>
