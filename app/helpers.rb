@@ -41,8 +41,9 @@ module DungeonTracker
     end
 
     def plus number
-      number = 0 if number.nil? or number.empty?
-      number.to_i > 0 ? "+#{number}" : number.to_s
+      number = 0 if number.nil?
+      number = 0 if number.is_a? String and number.empty?
+      number.to_i >= 0 ? "+#{number}" : number.to_s
     end
 
     def mkd text

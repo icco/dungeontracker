@@ -1,4 +1,7 @@
 <div class="unit span-grid">
+  <div style="float: right;">
+    <a href="<%= url_for(:view_character, id: @c.id) %>">View</a>
+  </div>
   <% form_tag url_for(:edit_character, :id => @c.id), :method => 'post', :class => 'pure-form pure-form-aligned' do %>
 
     <fieldset class="form_section">
