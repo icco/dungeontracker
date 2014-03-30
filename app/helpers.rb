@@ -38,9 +38,11 @@ module DungeonTracker
 
     def mod number
       val = (number.to_i - 10) / 2
-      val = "+#{val}" if val >= 0
+    end
 
-      val
+    def plus number
+      number = 0 if number.nil? or number.empty?
+      number.to_i > 0 ? "+#{number}" : number.to_s
     end
 
     def mkd text
