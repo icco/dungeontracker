@@ -9,44 +9,87 @@
     </legend>
 
     <ul>
-    <li>
+      <li>
       Name: <%= @c.name %>
-    </li>
+      </li>
 
-    <li>
+      <li>
       Level: <%= @c.data["level"] %>
-    </li>
+      </li>
 
-    <li>
+      <li>
       Race: <%= @c.data["race"] %>
-    </li>
+      </li>
 
-    <li>
+      <li>
       Age: <%= @c.data["age"] %>
-    </li>
+      </li>
 
-    <li>
+      <li>
       Gender: <%= @c.data["gender"] %>
-    </li>
+      </li>
 
-    <li>
+      <li>
       Diety: <%= @c.data["diety"] %>
-    </li>
+      </li>
 
-    <li>
+      <li>
       Weight: <%= @c.data["weight"] %>
-    </li>
+      </li>
 
-    <li>
+      <li>
       Height: <%= @c.data["height"] %>
-    </li>
+      </li>
     </ul>
   </div>
+
   <div class="unit one-of-two">
+    <legend>
+      Health / Defense
+    </legend>
+
+    <ul>
+      <li>
+      Total HP: <%= @c.data["hp"] %>
+      </li>
+
+      <li>
+      Surges per Day: <%= @c.data["surges"] %>
+      </li>
+
+      <li>
+      Initiative: <%= plus(@c.data["initiative"]) %>
+      </li>
+
+      <li>
+      Movement Speed: <%= @c.data["speed"] %>
+      </li>
+
+      <li>
+      Armor Class: <%= @c.data["ac"] %>
+      </li>
+
+      <li>
+      Fortitude: <%= @c.data["fort"] %>
+      </li>
+
+      <li>
+      Reflex: <%= @c.data["ref"] %>
+      </li>
+
+      <li>
+      Will: <%= @c.data["will"] %>
+      </li>
+    </ul>
+  </div>
+
+  <div class="unit one-of-two">
+    <legend>
+      Ability Modifiers
+    </legend>
     <table>
       <tr>
         <th>
-          Ability
         </th>
         <th>
           Score
