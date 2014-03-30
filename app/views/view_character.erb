@@ -336,6 +336,20 @@
 
   <div class="unit span-grid block">
     <legend>
+      Feats
+    </legend>
+    <% @c.data["feat_name"].each_index do |i| %>
+      <div class="unit one-of-two">
+        <h3><%= @c.data["feat_name"][i] %></h3>
+        <div>
+          <%== mkd @c.data["feat_desc"][i] %>
+        </div>
+      </div>
+    <% end if !@c.data["feat_name"].nil? %>
+  </div>
+
+  <div class="unit span-grid block">
+    <legend>
       At-Will Powers
     </legend>
     <% @c.data["atwill_power_name"].each_index do |i| %>
