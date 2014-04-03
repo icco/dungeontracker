@@ -3,8 +3,9 @@
 init = Time.now
 connections = {
   :development => "postgres://#{ENV['USER']}@localhost/dungeontracker",
-  :test => ENV['DATABASE_URL'] || "postgres://postgres@localhost/dungeontracker_test",
-  :production => ENV['DATABASE_URL']
+  :travis => "postgres://postgres@localhost/dungeontracker_test",
+  :snap_ci => ENV['DATABASE_URL'],
+  :production => ENV['DATABASE_URL'],
 }.delete_if {|k, v| v.nil? }
 
 connections.each do |k, v|
@@ -57,7 +58,8 @@ ActiveSupport.use_standard_json_time_format = true
 ActiveSupport.escape_html_entities_in_json = false
 
 # Now we can estabilish connection with our db
-if ActiveRecord::Base.configurations[Padrino.env]
+db_env = ENV["TEST_ENV"] || Padrino.env
+if ActiveRecord::Base.configurations[db_env]
   options = ActiveRecord::Base.configurations[Padrino.env]
 
   # Log what we are connecting to.
