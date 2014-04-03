@@ -36,7 +36,7 @@ GEM
     numbers_and_words (0.10.0)
       activesupport
       i18n
-    oj (2.6.1)
+    oj (2.7.1)
     padrino (0.12.0)
       padrino-admin (= 0.12.0)
       padrino-cache (= 0.12.0)
