@@ -3,7 +3,7 @@
 init = Time.now
 connections = {
   :development => "postgres://#{ENV['USER']}@localhost/dungeontracker",
-  :test => "postgres://postgres@localhost/dungeontracker_test",
+  :test => ENV['DATABASE_URL'] || "postgres://postgres@localhost/dungeontracker_test",
   :production => ENV['DATABASE_URL']
 }.delete_if {|k, v| v.nil? }
 
