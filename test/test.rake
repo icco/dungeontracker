@@ -10,4 +10,4 @@ test_tasks.each do |folder|
 end
 
 desc "Run application test suite"
-task 'test' => [:environment] + test_tasks.map { |f| "test:#{f}" }
+task 'test' => test_tasks.map { |f| "test:#{f}" }
