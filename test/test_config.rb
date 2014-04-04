@@ -1,7 +1,7 @@
 RACK_ENV = 'test' unless defined?(RACK_ENV)
 require File.expand_path('../../config/boot', __FILE__)
 
-p ActiveRecord::Base.configurations, Padrino.env, ENV['DATABASE_URL']
+p ActiveRecord::Base.configurations, Padrino.env, ENV.inspect
 
 class MiniTest::Unit::TestCase
   include Rack::Test::Methods
