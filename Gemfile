@@ -9,7 +9,7 @@ gem 'oj'
 gem 'padrino', '~> 0.12'
 gem 'pg'
 gem 'rake'
-gem 'redcarpet'
+gem 'redcarpet', '>= 3.5.1'
 gem 'sass'
 gem 'thin'
 
