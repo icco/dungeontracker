@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.2.2'
 
-gem 'activerecord', '~> 4.0', :require => 'active_record'
+gem 'activerecord', '~> 5.2', '>= 5.2.4.5', :require => 'active_record'
 gem 'erubis', '>= 2.7.0'
 gem 'numbers_and_words'
 gem 'oj'
